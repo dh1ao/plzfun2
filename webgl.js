@@ -12,7 +12,6 @@ const normalTexture = textureLoader.load('ball_Normal.png');
 
 // buddha laden
 const objLoader = new THREE.OBJLoader();
-// load a resource
 
 let bhuddaObj = objLoader.load('richy.obj', (o) => {
 	bhuddaObj = o;
