@@ -142,9 +142,9 @@ camera.rotation.y = 0;
 camera.rotation.z = 0;
 scene.add(camera);
 const cameraFolder = gui.addFolder('camera');
-cameraFolder.add(camera.position, 'x').min(-100).max(100).step(1);
-cameraFolder.add(camera.position, 'y').min(-100).max(100).step(1);
-cameraFolder.add(camera.position, 'z').min(-100).max(100).step(1);
+cameraFolder.add(camera.position, 'x').min(-100).max(100).step(0.01);
+cameraFolder.add(camera.position, 'y').min(-100).max(100).step(0.01);
+cameraFolder.add(camera.position, 'z').min(-100).max(100).step(0.01);
 
 const cameraFolderRot = gui.addFolder('camera rotation');
 cameraFolderRot.add(camera.rotation, 'x').min(-90).max(90).step(0.001);
