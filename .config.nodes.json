@@ -644,50 +644,6 @@
             }
         }
     },
-    "node-red-contrib-os": {
-        "name": "node-red-contrib-os",
-        "version": "0.2.1",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "os": {
-                "name": "os",
-                "types": [
-                    "OS",
-                    "Drives",
-                    "Uptime",
-                    "CPUs",
-                    "Loadavg",
-                    "Memory",
-                    "NetworkIntf"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-os",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-os/os/os.js"
-            }
-        }
-    },
-    "node-red-contrib-flightradar24": {
-        "name": "node-red-contrib-flightradar24",
-        "version": "0.1.0",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "flightradar24": {
-                "name": "flightradar24",
-                "types": [
-                    "flightradar24"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-flightradar24",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-flightradar24/node.js"
-            }
-        }
-    },
     "node-red-contrib-web-worldmap": {
         "name": "node-red-contrib-web-worldmap",
         "version": "2.21.5",
@@ -711,6 +667,25 @@
             }
         }
     },
+    "node-red-contrib-ui-level": {
+        "name": "node-red-contrib-ui-level",
+        "version": "0.1.45",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "ui-level": {
+                "name": "ui-level",
+                "types": [
+                    "ui_level"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-ui-level",
+                "file": "/home/peter/.node-red/node_modules/node-red-contrib-ui-level/ui-level.js"
+            }
+        }
+    },
     "node-red-contrib-ui-media": {
         "name": "node-red-contrib-ui-media",
         "version": "1.2.0",
@@ -727,6 +702,25 @@
                 "user": false,
                 "module": "node-red-contrib-ui-media",
                 "file": "/home/peter/.node-red/node_modules/node-red-contrib-ui-media/ui_media.js"
+            }
+        }
+    },
+    "node-red-contrib-flightradar24": {
+        "name": "node-red-contrib-flightradar24",
+        "version": "0.1.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "flightradar24": {
+                "name": "flightradar24",
+                "types": [
+                    "flightradar24"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-flightradar24",
+                "file": "/home/peter/.node-red/node_modules/node-red-contrib-flightradar24/node.js"
             }
         }
     },
@@ -791,100 +785,28 @@
             }
         }
     },
-    "node-red-contrib-ui-level": {
-        "name": "node-red-contrib-ui-level",
-        "version": "0.1.45",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "ui-level": {
-                "name": "ui-level",
-                "types": [
-                    "ui_level"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-ui-level",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-ui-level/ui-level.js"
-            }
-        }
-    },
-    "node-red-contrib-linux-diskio": {
-        "name": "node-red-contrib-linux-diskio",
+    "node-red-contrib-os": {
+        "name": "node-red-contrib-os",
         "version": "0.2.1",
         "local": true,
         "user": true,
         "nodes": {
-            "diskio": {
-                "name": "diskio",
+            "os": {
+                "name": "os",
                 "types": [
-                    "diskio"
+                    "OS",
+                    "Drives",
+                    "Uptime",
+                    "CPUs",
+                    "Loadavg",
+                    "Memory",
+                    "NetworkIntf"
                 ],
                 "enabled": true,
                 "local": true,
                 "user": false,
-                "module": "node-red-contrib-linux-diskio",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-linux-diskio/diskio.js"
-            }
-        }
-    },
-    "node-red-contrib-linux-memory": {
-        "name": "node-red-contrib-linux-memory",
-        "version": "0.8.1",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "memory": {
-                "name": "memory",
-                "types": [
-                    "memory"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-linux-memory",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-linux-memory/memory.js"
-            }
-        }
-    },
-    "node-red-contrib-linux-network-stats": {
-        "name": "node-red-contrib-linux-network-stats",
-        "version": "0.2.1",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "network_stats": {
-                "name": "network_stats",
-                "types": [
-                    "network_stats"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-linux-network-stats",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-linux-network-stats/network-stats.js"
-            }
-        }
-    },
-    "node-red-node-email-variable": {
-        "name": "node-red-node-email-variable",
-        "version": "1.0.3",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "email": {
-                "name": "email",
-                "types": [
-                    "e-mail",
-                    "e-mail in",
-                    "e-mail mta"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-node-email-variable",
-                "file": "/home/peter/.node-red/node_modules/node-red-node-email-variable/variable-email.js"
+                "module": "node-red-contrib-os",
+                "file": "/home/peter/.node-red/node_modules/node-red-contrib-os/os/os.js"
             }
         }
     }
