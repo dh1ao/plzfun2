@@ -70,7 +70,7 @@ pointLight.position.z = 4;
 scene.add(pointLight);
 
 // Light1
-const pointLight2 = new THREE.PointLight(0x87ff, 0.1);
+const pointLight2 = new THREE.PointLight(0xffffff, 0.1);
 pointLight2.position.set(-1.18, -1.85, 2.32);
 pointLight2.intensity = 7.21;
 scene.add(pointLight2);
@@ -87,7 +87,7 @@ light1.addColor(light1Color, 'color').onChange(() => {
 });
 
 // Light2
-const pointLight3 = new THREE.PointLight(0xfff000, 0.1);
+const pointLight3 = new THREE.PointLight(0xffffff, 0.1);
 pointLight3.position.set(2, -0.6, 2.85);
 pointLight3.intensity = 8.2;
 scene.add(pointLight3);
@@ -103,7 +103,7 @@ light2.addColor(light2Color, 'color').onChange(() => {
 	pointLight3.color.set(light2Color.color);
 });
 // Light3
-const pointLight4 = new THREE.PointLight(0x59ff00, 0.1);
+const pointLight4 = new THREE.PointLight(0xffffff, 0.1);
 pointLight4.position.set(16, -15, 0);
 pointLight4.intensity = 2.03;
 scene.add(pointLight4);
