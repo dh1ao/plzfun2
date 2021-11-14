@@ -407,7 +407,7 @@
     },
     "node-red-dashboard": {
         "name": "node-red-dashboard",
-        "version": "3.0.4",
+        "version": "3.1.1",
         "local": true,
         "user": true,
         "nodes": {

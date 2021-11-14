@@ -59,10 +59,6 @@ objLoader.load('richy.obj', (o) => {
 	scene.add(bhuddaObj);
 });
 
-// Objects
-const geometry = new THREE.TorusGeometry(0.8, 0.4, 16, 100);
-//const geometry = new THREE.SphereGeometry(0.75, 64, 64);
-
 const pointLight = new THREE.PointLight(0xffffff, 0.1);
 pointLight.position.x = 2;
 pointLight.position.y = 3;
