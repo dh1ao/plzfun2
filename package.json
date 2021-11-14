@@ -12,7 +12,7 @@
         "node-red-contrib-ui-level": "~0.1.45",
         "node-red-contrib-ui-media": "~1.2.0",
         "node-red-contrib-web-worldmap": "~2.21.5",
-        "node-red-dashboard": "3.0.4",
+        "node-red-dashboard": "~3.1.1",
         "node-red-node-email-variable": "1.0.3"
     },
     "node-red": {

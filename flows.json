@@ -78,112 +78,6 @@
         "id": "6c46d60d1f3e7d40",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD.MM.YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "d31b8bc2e93624e4",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "fa-home fa-2x",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "bf03c5d7c6137e2c",
-        "type": "ui_base",
-        "theme": {
             "name": "theme-custom",
             "lightTheme": {
                 "default": "#0094CE",
@@ -194,7 +88,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#097479",
+                "baseColor": "#4e9a06",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -210,7 +104,7 @@
                 "base-color": {
                     "default": "#4B7930",
                     "value": "#4B7930",
-                    "edited": false
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
                     "value": "#4B7930",
@@ -261,7 +155,7 @@
             }
         },
         "site": {
-            "name": "PLZ",
+            "name": "Node-RED Dashboard",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -278,6 +172,15 @@
                 "py": 0
             }
         }
+    },
+    {
+        "id": "d31b8bc2e93624e4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "fa-home fa-2x",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "10e7fabaa1550e75",
@@ -4320,7 +4223,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html>\n<head>\n\n    <title>three.js in node-red</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n<style>\nbody {background-color: powderblue;}\n</style>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n<body>\n\t<canvas class=\"webgl\"></canvas>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js\"></script>\n<script src=\"https://unpkg.com/three@0.134.0/examples/js/loaders/OBJLoader.js\"></script>\n<script src=\"./webgl.js\"></script>\n</body>\n\n",
+        "template": "<html>\n<head>\n\n    <title>three.js in node-red</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n<style>\nbody {background-color: powderblue;}\n</style>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n<body>\n\t<canvas class=\"webgl\"></canvas>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js\"></script>\n<script src=\"https://unpkg.com/three@0.134.0/examples/js/loaders/OBJLoader.js\"></script>\n<script src=\"webgl.js\"></script>\n</body>\n\n",
         "output": "str",
         "x": 370,
         "y": 160,
