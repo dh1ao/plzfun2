@@ -3,20 +3,17 @@
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 // import * as dat from 'dat.gui';
 
-console.log('webgl loaded');
-
 // Loading
 const textureLoader = new THREE.TextureLoader();
-//const normalTexture = textureLoader.load('/textures/height.png');
 const normalTexture = textureLoader.load('ball_Normal.png');
 
 // buddha laden
 const objLoader = new THREE.OBJLoader();
+// Material
+const material = new THREE.MeshStandardMaterial();
 
-let bhuddaObj = objLoader.load('richy.obj', (o) => {
-	bhuddaObj = o;
-	scene.add(o);
-});
+let bhuddaObj;
+
 // Debug
 const gui = new dat.GUI();
 gui.close();
@@ -27,23 +24,44 @@ const canvas = document.querySelector('canvas.webgl');
 // Scene
 const scene = new THREE.Scene();
 
+/**
+ * Sizes
+ */
+const sizes = {
+	width: window.innerWidth,
+	height: window.innerHeight
+};
+
+/**
+ * Renderer
+ */
+const renderer = new THREE.WebGLRenderer({
+	canvas: canvas,
+	alpha: true,
+	antialias: true
+});
+
+renderer.setSize(sizes.width, sizes.height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+objLoader.load('richy.obj', (o) => {
+	o.traverse(function(child) {
+		if (child instanceof THREE.Mesh) {
+			child.material.color = new THREE.Color(0xffffff);
+			child.material.metalness = 1;
+			child.roughness = 0.2;
+			child.normalMap = normalTexture;
+		}
+	});
+
+	bhuddaObj = o;
+
+	scene.add(bhuddaObj);
+});
+
 // Objects
 const geometry = new THREE.TorusGeometry(0.8, 0.4, 16, 100);
 //const geometry = new THREE.SphereGeometry(0.75, 64, 64);
-
-// Materials
-
-const material = new THREE.MeshStandardMaterial();
-material.metalness = 0.7;
-material.roughness = 0.2;
-material.normalMap = normalTexture;
-material.color = new THREE.Color(0x292929);
-
-// Mesh
-const sphere = new THREE.Mesh(geometry, material);
-scene.add(sphere);
-
-// Lights
 
 const pointLight = new THREE.PointLight(0xffffff, 0.1);
 pointLight.position.x = 2;
@@ -57,9 +75,6 @@ pointLight2.position.set(-1.18, -1.85, 2.32);
 pointLight2.intensity = 7.21;
 scene.add(pointLight2);
 
-// const pointLightHelper = new THREE.PointLightHelper(pointLight2, 0.3);
-// scene.add(pointLightHelper);
-
 const light1 = gui.addFolder('Light 1');
 light1.add(pointLight2.position, 'x').min(-6).max(6).step(0.01);
 light1.add(pointLight2.position, 'y').min(-3).max(3).step(0.01);
@@ -70,6 +85,7 @@ const light1Color = { color: 0xff0000 };
 light1.addColor(light1Color, 'color').onChange(() => {
 	pointLight2.color.set(light1Color.color);
 });
+
 // Light2
 const pointLight3 = new THREE.PointLight(0xfff000, 0.1);
 pointLight3.position.set(2, -0.6, 2.85);
@@ -102,17 +118,6 @@ const light3Color = { color: 0xff0000 };
 light3.addColor(light3Color, 'color').onChange(() => {
 	pointLight4.color.set(light3Color.color);
 });
-
-// const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 0.3);
-// scene.add(pointLightHelper2);
-
-/**
- * Sizes
- */
-const sizes = {
-	width: window.innerWidth,
-	height: window.innerHeight
-};
 
 window.addEventListener('resize', () => {
 	// Update sizes
@@ -155,17 +160,6 @@ cameraFolderRot.add(camera.rotation, 'z').min(-90).max(90).step(0.001);
 // controls.enableDamping = true
 
 /**
- * Renderer
- */
-const renderer = new THREE.WebGLRenderer({
-	canvas: canvas,
-	alpha: true,
-	antialias: true
-});
-renderer.setSize(sizes.width, sizes.height);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-/**
  * Animate
  */
 
@@ -193,21 +187,11 @@ const tick = () => {
 
 	const elapsedTime = clock.getElapsedTime();
 
-	// Update objects
-	sphere.rotation.y = 0.5 * elapsedTime;
-	if (bhuddaObj) bhuddaObj.rotation.z = 0.75 * elapsedTime;
-
-	sphere.rotation.y += 0.5 * (targetX - sphere.rotation.y);
-	sphere.rotation.x += 0.5 * (targetY - sphere.rotation.x);
-	sphere.position.z += 0.5 * (targetY - sphere.rotation.x);
-
-	// Update Orbital Controls
-	// controls.update()
-
+	if (bhuddaObj) {
+		bhuddaObj.rotation.z = 0.75 * elapsedTime;
+	}
 	// Render
 	renderer.render(scene, camera);
-
-	// Call tick again on the next frame
 	window.requestAnimationFrame(tick);
 };
 
