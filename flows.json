@@ -2737,7 +2737,9 @@
         "x": 530,
         "y": 560,
         "wires": [
-            []
+            [
+                "13d5e4a8e83fad2a"
+            ]
         ]
     },
     {
@@ -3183,6 +3185,29 @@
         "x": 780,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "13d5e4a8e83fad2a",
+        "type": "ui_media",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "name": "",
+        "width": 0,
+        "height": 0,
+        "order": 20,
+        "category": "",
+        "file": "",
+        "layout": "adjust",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 780,
+        "y": 560,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "0ea2f7a1e63406c1",
