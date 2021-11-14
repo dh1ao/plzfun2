@@ -1,0 +1,24 @@
+{
+    "name": "PLZFun",
+    "description": "erste Schritte mit node-red",
+    "version": "0.0.1",
+    "dependencies": {
+        "node-red-contrib-flightradar24": "~0.1.0",
+        "node-red-contrib-image-tools": "~2.0.2",
+        "node-red-contrib-linux-diskio": "0.2.1",
+        "node-red-contrib-linux-memory": "0.8.1",
+        "node-red-contrib-linux-network-stats": "0.2.1",
+        "node-red-contrib-os": "~0.2.1",
+        "node-red-contrib-ui-level": "~0.1.45",
+        "node-red-contrib-ui-media": "~1.2.0",
+        "node-red-contrib-web-worldmap": "~2.21.5",
+        "node-red-dashboard": "3.0.4",
+        "node-red-node-email-variable": "1.0.3"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}

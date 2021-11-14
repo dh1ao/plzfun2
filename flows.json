@@ -1,0 +1,4367 @@
+[
+    {
+        "id": "2b499fb43b7c09b4",
+        "type": "tab",
+        "label": "System",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ad699d991fc8f5bb",
+        "type": "tab",
+        "label": "openData",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5a80f4b08518328d",
+        "type": "tab",
+        "label": "Webcams",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "13c671df660caf03",
+        "type": "tab",
+        "label": "openWeather",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c76cf4d7930ff7b1",
+        "type": "tab",
+        "label": "api",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b7b534fbe43e027d",
+        "type": "tab",
+        "label": "flightradar",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "aac6175d7d1306af",
+        "type": "tab",
+        "label": "PLZ Fun",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "09a43f806fd59071",
+        "type": "tab",
+        "label": "Wetter",
+        "disabled": false,
+        "info": "Wetter Details",
+        "env": []
+    },
+    {
+        "id": "32101b1a30d365e2",
+        "type": "tab",
+        "label": "jetphotos",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "825cb57ac6686b96",
+        "type": "tab",
+        "label": "threejs",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6c46d60d1f3e7d40",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d31b8bc2e93624e4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "fa-home fa-2x",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bf03c5d7c6137e2c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#6db046",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#4b7930",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "PLZ",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "10e7fabaa1550e75",
+        "type": "ui_tab",
+        "name": "System",
+        "icon": "fa-television fa-2x",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ae559b234acc86eb",
+        "type": "ui_group",
+        "name": "Systemanzeigen",
+        "tab": "10e7fabaa1550e75",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b38b00e078ff3c09",
+        "type": "ui_group",
+        "name": "WetterDetailGruppe",
+        "tab": "9de11e6f8cf437c5",
+        "order": 1,
+        "disp": false,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9de11e6f8cf437c5",
+        "type": "ui_tab",
+        "name": "Wetter",
+        "icon": "fa-thermometer-three-quarters fa-2x",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ebca01fdcf4c84c2",
+        "type": "ui_group",
+        "name": "PLZ",
+        "tab": "d31b8bc2e93624e4",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cbddde99656916a8",
+        "type": "ui_spacer",
+        "z": "09a43f806fd59071",
+        "name": "spacer",
+        "group": "b38b00e078ff3c09",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6fc3e193e714d921",
+        "type": "ui_spacer",
+        "z": "09a43f806fd59071",
+        "name": "spacer",
+        "group": "b38b00e078ff3c09",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2d330e92a246bcc8",
+        "type": "ui_spacer",
+        "z": "09a43f806fd59071",
+        "name": "spacer",
+        "group": "b38b00e078ff3c09",
+        "order": 14,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "e4444a165f6a8574",
+        "type": "ui_spacer",
+        "z": "09a43f806fd59071",
+        "name": "spacer",
+        "group": "b38b00e078ff3c09",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0de4c34b5cf2242f",
+        "type": "ui_spacer",
+        "z": "09a43f806fd59071",
+        "name": "spacer",
+        "group": "b38b00e078ff3c09",
+        "order": 16,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f7ecca5028f83d27",
+        "type": "ui_spacer",
+        "z": "09a43f806fd59071",
+        "name": "spacer",
+        "group": "b38b00e078ff3c09",
+        "order": 18,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "196588b9577a10f2",
+        "type": "ui_spacer",
+        "z": "09a43f806fd59071",
+        "name": "spacer",
+        "group": "b38b00e078ff3c09",
+        "order": 21,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "aa65e6bafd4cc3c0",
+        "type": "ui_tab",
+        "name": "JetPhoto",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "c2f0c7f8a9fe136e",
+        "type": "ui_group",
+        "name": "PlaneInfo",
+        "tab": "aa65e6bafd4cc3c0",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "090866092f482bb7",
+        "type": "ui_chart",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 7,
+        "width": "3",
+        "height": "3",
+        "label": "Memory",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 580,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2b2a3be8f49e2c0",
+        "type": "ui_chart",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 8,
+        "width": "3",
+        "height": "3",
+        "label": "Netzwerch",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#fce94f",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "060bab8db67160ea",
+        "type": "ui_chart",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 3,
+        "width": "3",
+        "height": "3",
+        "label": "Disk IO",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#73d216",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c08d642138bd52ba",
+        "type": "inject",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "a03d87b7ccb4402e",
+                "f4113e6e2264dee7",
+                "5e04c69320d2701e",
+                "041a15bcc4d0b1b4"
+            ]
+        ]
+    },
+    {
+        "id": "8e84347da9e68968",
+        "type": "ui_chart",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 4,
+        "width": "3",
+        "height": "3",
+        "label": "Load Avg",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#edd400",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 840,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd4aec70364765d3",
+        "type": "change",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.loadavg[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "8e84347da9e68968"
+            ]
+        ]
+    },
+    {
+        "id": "a03d87b7ccb4402e",
+        "type": "Loadavg",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "x": 410,
+        "y": 80,
+        "wires": [
+            [
+                "fd4aec70364765d3"
+            ]
+        ]
+    },
+    {
+        "id": "f4113e6e2264dee7",
+        "type": "Drives",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "x": 410,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e04c69320d2701e",
+        "type": "NetworkIntf",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "c2b2a3be8f49e2c0"
+            ]
+        ]
+    },
+    {
+        "id": "041a15bcc4d0b1b4",
+        "type": "Memory",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "scale": "Byte",
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "090866092f482bb7"
+            ]
+        ]
+    },
+    {
+        "id": "63e12ff9eaf62ef7",
+        "type": "link in",
+        "z": "ad699d991fc8f5bb",
+        "name": "opendata",
+        "links": [
+            "6fe36e2b925a7b20",
+            "10e2e7060ebd147b",
+            "1fd5e1f974422e79"
+        ],
+        "x": 235,
+        "y": 40,
+        "wires": [
+            [
+                "ec556443768aee6c"
+            ]
+        ]
+    },
+    {
+        "id": "c61228de2670ec42",
+        "type": "link out",
+        "z": "ad699d991fc8f5bb",
+        "name": "area",
+        "mode": "link",
+        "links": [
+            "1c01138a7e634c05",
+            "70345e53e821cb9e",
+            "740fa795d7ac2ecc",
+            "d01ab548cfadf555",
+            "f034fa4b38d12dc0",
+            "656909f25d20d4fe"
+        ],
+        "x": 935,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ef57c28870896595",
+        "type": "change",
+        "z": "ad699d991fc8f5bb",
+        "name": "Polygon Datensätze",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lon",
+                "pt": "msg",
+                "to": "payload.records[0].fields.geo_point_2d[1]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "lat",
+                "pt": "msg",
+                "to": "msg.payload.records[0].fields.geo_point_2d[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.records",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "397e08f5cc51cdc2"
+            ]
+        ]
+    },
+    {
+        "id": "397e08f5cc51cdc2",
+        "type": "split",
+        "z": "ad699d991fc8f5bb",
+        "name": "Polygone nacheinander",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 910,
+        "y": 120,
+        "wires": [
+            [
+                "22c530c63c6d6bfc"
+            ]
+        ]
+    },
+    {
+        "id": "22c530c63c6d6bfc",
+        "type": "change",
+        "z": "ad699d991fc8f5bb",
+        "name": "Koordinaten der Polygonpunkte",
+        "rules": [
+            {
+                "t": "set",
+                "p": "name",
+                "pt": "msg",
+                "to": "payload.fields.plz_name_long",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.fields.geometry.coordinates[0]\t\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "22461b998a9ec448"
+            ]
+        ]
+    },
+    {
+        "id": "22461b998a9ec448",
+        "type": "split",
+        "z": "ad699d991fc8f5bb",
+        "name": "einzelne Punktpaare (lat,lon)",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "d6089671745efb2c"
+            ]
+        ]
+    },
+    {
+        "id": "d6089671745efb2c",
+        "type": "change",
+        "z": "ad699d991fc8f5bb",
+        "name": "lat lon tauschen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp",
+                "pt": "msg",
+                "to": "payload[1]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload[1]",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload[0]",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "temp",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 200,
+        "wires": [
+            [
+                "918c769f0ef85963"
+            ]
+        ]
+    },
+    {
+        "id": "918c769f0ef85963",
+        "type": "join",
+        "z": "ad699d991fc8f5bb",
+        "name": "alle Punkte wieder zusammen",
+        "mode": "auto",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "bfbb0371e624dceb"
+            ]
+        ]
+    },
+    {
+        "id": "bfbb0371e624dceb",
+        "type": "change",
+        "z": "ad699d991fc8f5bb",
+        "name": "area Element für worldmap",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.area",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "Grenzen",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.name",
+                "pt": "msg",
+                "to": "name",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.command.lat",
+                "pt": "msg",
+                "to": "lat",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.command.lon",
+                "pt": "msg",
+                "to": "lon",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.lat",
+                "pt": "msg",
+                "to": "payload.command.lat",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.lon",
+                "pt": "msg",
+                "to": "payload.command.lon",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 280,
+        "wires": [
+            [
+                "c61228de2670ec42"
+            ]
+        ]
+    },
+    {
+        "id": "ec556443768aee6c",
+        "type": "http request",
+        "z": "ad699d991fc8f5bb",
+        "name": "openDataRequest",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://public.opendatasoft.com/api/records/1.0/search/?dataset=georef-germany-postleitzahl&q={{payload}}&facet=plz_name&facet=lan_name&facet=lan_code",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "ef57c28870896595",
+                "40660d41b07f9d84"
+            ]
+        ]
+    },
+    {
+        "id": "40660d41b07f9d84",
+        "type": "change",
+        "z": "ad699d991fc8f5bb",
+        "name": "lösche vorherige PLZ Grenzen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.command",
+                "pt": "msg",
+                "to": "{\"clear\":\"Grenzen\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 40,
+        "wires": [
+            [
+                "c61228de2670ec42"
+            ]
+        ]
+    },
+    {
+        "id": "740fa795d7ac2ecc",
+        "type": "link in",
+        "z": "5a80f4b08518328d",
+        "name": "",
+        "links": [
+            "c61228de2670ec42"
+        ],
+        "x": 155,
+        "y": 40,
+        "wires": [
+            [
+                "359ed573907bca3f"
+            ]
+        ]
+    },
+    {
+        "id": "5b49d8731a3b2c9a",
+        "type": "change",
+        "z": "5a80f4b08518328d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "\"https://api.windy.com/api/webcams/v2/list/nearby=\"&lat&\",\"&lon&\t\",30?show=webcams:location,image&lang=de\"\t",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"x-windy-key\":\"IQxMRuDYFsIzZq6Q9cIv2ybxdlQMLLJ4\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "8bf712f41b38e56a"
+            ]
+        ]
+    },
+    {
+        "id": "8bf712f41b38e56a",
+        "type": "http request",
+        "z": "5a80f4b08518328d",
+        "name": "windyWebCamAPI",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "8a6ea9198c60b563"
+            ]
+        ]
+    },
+    {
+        "id": "8a6ea9198c60b563",
+        "type": "change",
+        "z": "5a80f4b08518328d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\tmsg.payload.result.webcams.{\t   \"name\":title,\t   \"icon\": image.current.icon,\t   \"photoUrl\":image.current.preview,\t   \"layer\":\"webcams\",\t   \"lon\": location.longitude,\t   \"lat\" : location.latitude\t}\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 80,
+        "wires": [
+            [
+                "84cbf9e8e409c697"
+            ]
+        ]
+    },
+    {
+        "id": "359ed573907bca3f",
+        "type": "switch",
+        "z": "5a80f4b08518328d",
+        "name": "",
+        "property": "payload.lon",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "-90",
+                "vt": "num",
+                "v2": "90",
+                "v2t": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "5b49d8731a3b2c9a",
+                "9ef2cadab6724b8d"
+            ]
+        ]
+    },
+    {
+        "id": "84cbf9e8e409c697",
+        "type": "split",
+        "z": "5a80f4b08518328d",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 990,
+        "y": 80,
+        "wires": [
+            [
+                "23514177082cfebe"
+            ]
+        ]
+    },
+    {
+        "id": "23514177082cfebe",
+        "type": "link out",
+        "z": "5a80f4b08518328d",
+        "name": "webcamsOut",
+        "links": [
+            "54c1af0b56a7ae01",
+            "9cb954cb15ecea63"
+        ],
+        "x": 1035,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "9ef2cadab6724b8d",
+        "type": "change",
+        "z": "5a80f4b08518328d",
+        "name": "lösche vorherige Webcams",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.command",
+                "pt": "msg",
+                "to": "{\"clear\":\"webcams\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 20,
+        "wires": [
+            [
+                "23514177082cfebe"
+            ]
+        ]
+    },
+    {
+        "id": "f034fa4b38d12dc0",
+        "type": "link in",
+        "z": "13c671df660caf03",
+        "name": "",
+        "links": [
+            "c61228de2670ec42"
+        ],
+        "x": 125,
+        "y": 160,
+        "wires": [
+            [
+                "476aa717dc05d647"
+            ]
+        ]
+    },
+    {
+        "id": "3fc638f023a4d9ed",
+        "type": "change",
+        "z": "13c671df660caf03",
+        "name": "openWeatherUrl",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "\"api.openweathermap.org/data/2.5/weather?lat=\"&lat&\"&lon=\"&lon&\"&appid=62f2eb232171ff327953e9d210d988a4&units=metric&lang=de\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "e9bcefd2d78df086"
+            ]
+        ]
+    },
+    {
+        "id": "e9bcefd2d78df086",
+        "type": "http request",
+        "z": "13c671df660caf03",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 610,
+        "y": 160,
+        "wires": [
+            [
+                "67230b19bbe61dc2"
+            ]
+        ]
+    },
+    {
+        "id": "476aa717dc05d647",
+        "type": "switch",
+        "z": "13c671df660caf03",
+        "name": "",
+        "property": "payload.lon",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "-90",
+                "vt": "num",
+                "v2": "90",
+                "v2t": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "3fc638f023a4d9ed"
+            ]
+        ]
+    },
+    {
+        "id": "67230b19bbe61dc2",
+        "type": "link out",
+        "z": "13c671df660caf03",
+        "name": "openWeatherOut",
+        "links": [
+            "f992595bc0a24b67",
+            "89addbfc16855a76",
+            "c62793b8a24374db",
+            "2e453c058cc6c036",
+            "4e7ae64a66753760"
+        ],
+        "x": 755,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2ad2535f41a282ea",
+        "type": "http in",
+        "z": "c76cf4d7930ff7b1",
+        "name": "",
+        "url": "plzapi",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 62.857142857142854,
+        "wires": [
+            [
+                "c69c4491594b2e1d"
+            ]
+        ]
+    },
+    {
+        "id": "e790697efc02e74b",
+        "type": "http response",
+        "z": "c76cf4d7930ff7b1",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 108.57142857142858,
+        "wires": []
+    },
+    {
+        "id": "10e2e7060ebd147b",
+        "type": "link out",
+        "z": "c76cf4d7930ff7b1",
+        "name": "",
+        "links": [
+            "63e12ff9eaf62ef7"
+        ],
+        "x": 815,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c69c4491594b2e1d",
+        "type": "change",
+        "z": "c76cf4d7930ff7b1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.plz",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 60,
+        "wires": [
+            [
+                "10e2e7060ebd147b"
+            ]
+        ]
+    },
+    {
+        "id": "54c1af0b56a7ae01",
+        "type": "link in",
+        "z": "c76cf4d7930ff7b1",
+        "name": "",
+        "links": [
+            "23514177082cfebe"
+        ],
+        "x": 175,
+        "y": 131.42857142857144,
+        "wires": [
+            [
+                "397b089aa95907f6"
+            ]
+        ]
+    },
+    {
+        "id": "836278d21850996c",
+        "type": "join",
+        "z": "c76cf4d7930ff7b1",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload.name",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "1",
+        "count": "50",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 450,
+        "y": 154.2857142857143,
+        "wires": [
+            [
+                "e790697efc02e74b"
+            ]
+        ]
+    },
+    {
+        "id": "397b089aa95907f6",
+        "type": "switch",
+        "z": "c76cf4d7930ff7b1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "icon",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 177.14285714285717,
+        "wires": [
+            [
+                "836278d21850996c"
+            ]
+        ]
+    },
+    {
+        "id": "e489a5d11caaf54e",
+        "type": "link out",
+        "z": "b7b534fbe43e027d",
+        "name": "FlightradarOut",
+        "mode": "link",
+        "links": [
+            "9cb954cb15ecea63"
+        ],
+        "x": 935,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "23c4a57834ffc53c",
+        "type": "switch",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "41be105f22f231bd"
+            ],
+            [
+                "a535a5f18d4855c5"
+            ]
+        ]
+    },
+    {
+        "id": "41be105f22f231bd",
+        "type": "change",
+        "z": "b7b534fbe43e027d",
+        "name": "aus",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"command\":{\"hidelayer\":\"FlightRadar24\"}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "FlightRadar24",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 320,
+        "wires": [
+            [
+                "e489a5d11caaf54e"
+            ]
+        ]
+    },
+    {
+        "id": "a535a5f18d4855c5",
+        "type": "change",
+        "z": "b7b534fbe43e027d",
+        "name": "an",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"command\":{\"showlayer\":\"FlightRadar24\"}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "FlightRadar24",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 360,
+        "wires": [
+            [
+                "e489a5d11caaf54e"
+            ]
+        ]
+    },
+    {
+        "id": "22c544473eb2c26a",
+        "type": "ui_switch",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "label": "Flieger",
+        "tooltip": "",
+        "group": "ebca01fdcf4c84c2",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "23c4a57834ffc53c"
+            ]
+        ]
+    },
+    {
+        "id": "b7cd5b04013d3c39",
+        "type": "file in",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "filename": "airlines.csv",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 440,
+        "wires": [
+            [
+                "5989d82406c1d3d4"
+            ]
+        ]
+    },
+    {
+        "id": "5989d82406c1d3d4",
+        "type": "csv",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": false,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 700,
+        "y": 440,
+        "wires": [
+            [
+                "38850b9fce491436"
+            ]
+        ]
+    },
+    {
+        "id": "645c86565a56dbec",
+        "type": "inject",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 460,
+        "wires": [
+            [
+                "b7cd5b04013d3c39",
+                "0e4d4ece18b660c6"
+            ]
+        ]
+    },
+    {
+        "id": "38850b9fce491436",
+        "type": "change",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "airlines",
+                "pt": "flow",
+                "to": "msg.payload.{     \"abr\": $.col5,     \"line\": $.col2,     \"country\": $.col7 }",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0bc938ec782d4f8",
+        "type": "function",
+        "z": "b7b534fbe43e027d",
+        "name": "human_readable",
+        "func": "var current_airline_icao = msg.payload.callsign ?msg.payload.callsign.substr(0,3):\"N/A\";\nvar origin_airport_iata = msg.payload.origin ? msg.payload.origin :\"unbekannt\";\nvar destination_airport_iata = msg.payload.destination ? msg.payload.destination :\"unbekannt\";\nvar registration = msg.payload.registration ? msg.payload.registration :\"N/A\";\nvar squawkCode = msg.payload.squawkCode ? msg.payload.squawkCode : \"N/A\";\nvar airlines = flow.get(\"airlines\");\nvar airports = flow.get(\"airports\");\nvar photo_url_base = \"https://www.jetphotos.com/registration/\"\nvar cache = global.get(\"flugzeuge\")\nmsg.payload.human={}\nmsg.payload.popup = \"<h3>Moment....</h3\"\n\nmsg.payload.name = registration\n\n// eigentlich überflüssig seid jetphotos\nairlines.forEach(function(al) {\n    if(al.abr==current_airline_icao) {\n        msg.payload.human[\"airline\"] = al.line\n        msg.payload.human[\"land\"] = al.country\n        if(al.country==\"Germany\") {\n            msg.payload.iconColor = \"#8dff33\"\n        }      \n    }\n});\n\n/*\nif (registration.substr(1, 2) == \"-H\" &&\n    registration.substr(0, 3) != \"F-H\" &&\n    registration.substr(0, 3) != \"G-H\")\n*/\nif ([\"D-H\"].includes(registration.substr(0, 3))||\n    [\"OE-X\",\"HB-X\",\"TC-H\"].includes(registration.substr(0, 4)))\n{\n    msg.payload.icon = \"helicopter\"\n    msg.payload.iconColor = \"#0000FF\"\n}\n\nif ([\"7000\"].includes(squawkCode) ||\n[\"D-B\", \"D-C\",\"D-E\",\"D-M\",\"D-I\",\"D-G\", \"D-F\", \"D-K\",\"D-L\",\"D-N\",\"D-O\"].includes(registration.substr(0, 3)) ||\n[\"4K-A\",\"9H-O\",\"9H-V\",\"CS-C\",\"CS-D\",\"CS-G\",\"CS-L\",\"CS-P\",\"D-AC\",\"EC-K\",\"ES-A\",\"HB-J\",\"I-AD\",\"LN-A\",\"LZ-B\",\n\"M-CH\",\"M-OV\",\"M-SE\",\n\"OE-F\",\"OK-U\",\"OP-D\",\"OY-C\",\"OK-P\",\"OY-N\",\"PH-D\",\"PH-E\",\"PH-N\",\"PH-V\",\"PH-Z\",\"PP-L\",\"PS-A\",\"RA-6\",\n\"S5-C\",\"SU-M\",\"T7-D\",\"YU-B\",\"YU-P\",\"YU-R\",\"YU-S\",\"YU-T\",\n\"ZS-C\",\"ZS-Y\"\n].includes(registration.substr(0, 4))) {\n    msg.payload.iconColor = \"#66FFFF\"\n    if (msg.payload.icon != \"helicopter\")\n        msg.payload.icon = \"smallplane\"\n}\n\nif ([\"0020\", \"0023\", \"0024\", \"0025\", \"0027\", \"0030\", \"0034\", \"0036\", \"0037\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0066\"\n}\n\nif ([\"7500\", \"7600\", \"7700\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0000\"\n    node.log(\"NOTFALL !!!\");\n}\nmsg.payload.human[\"gestarted in\"] = \"N/A\"\nmsg.payload.human[\"Ziel\"] = \"N/A\"\n\nairports.forEach(function(ap) {\n  if(ap.abr==origin_airport_iata) {\n      msg.payload.human[\"gestarted in\"] = ap.name+\" \"+ap.country\n  }\n  if(ap.abr==destination_airport_iata) {\n      msg.payload.human[\"Ziel\"] = ap.name+\" \"+ap.country\n  }\n});\n\ncache.push(msg.payload)\nglobal.set(\"flugzeuge\", cache)\n\n// und ab in den globalen context\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "e489a5d11caaf54e"
+            ]
+        ]
+    },
+    {
+        "id": "0e4d4ece18b660c6",
+        "type": "file in",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "filename": "airports.csv",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 510,
+        "y": 500,
+        "wires": [
+            [
+                "a9ccb1f8ac664b89"
+            ]
+        ]
+    },
+    {
+        "id": "a9ccb1f8ac664b89",
+        "type": "csv",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": false,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 710,
+        "y": 500,
+        "wires": [
+            [
+                "30c6a0eb7b8b6398"
+            ]
+        ]
+    },
+    {
+        "id": "30c6a0eb7b8b6398",
+        "type": "change",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "airports",
+                "pt": "flow",
+                "to": "msg.payload.{     \"abr\": $.iata_code,     \"name\": $.name,     \"country\": $.iso_country }",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "656909f25d20d4fe",
+        "type": "link in",
+        "z": "b7b534fbe43e027d",
+        "name": "",
+        "links": [
+            "c61228de2670ec42"
+        ],
+        "x": 155,
+        "y": 120,
+        "wires": [
+            [
+                "17e191c1f18ca3be",
+                "94060e4f6149555b"
+            ]
+        ]
+    },
+    {
+        "id": "17e191c1f18ca3be",
+        "type": "change",
+        "z": "b7b534fbe43e027d",
+        "name": "reset Switch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "22c544473eb2c26a"
+            ]
+        ]
+    },
+    {
+        "id": "94060e4f6149555b",
+        "type": "change",
+        "z": "b7b534fbe43e027d",
+        "name": "reset_cache",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flugzeuge",
+                "pt": "global",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "553badd14f937e0f"
+            ]
+        ]
+    },
+    {
+        "id": "553badd14f937e0f",
+        "type": "flightradar24",
+        "z": "b7b534fbe43e027d",
+        "lat": "payload.lat",
+        "latType": "msg",
+        "lon": "payload.lon",
+        "lonType": "msg",
+        "name": "",
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "e0bc938ec782d4f8"
+            ]
+        ]
+    },
+    {
+        "id": "160a75a0cd84502c",
+        "type": "inject",
+        "z": "aac6175d7d1306af",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "sylt",
+        "payloadType": "str",
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "6fe36e2b925a7b20"
+            ]
+        ]
+    },
+    {
+        "id": "6fe36e2b925a7b20",
+        "type": "link out",
+        "z": "aac6175d7d1306af",
+        "name": "plz",
+        "mode": "link",
+        "links": [
+            "63e12ff9eaf62ef7"
+        ],
+        "x": 315,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1c01138a7e634c05",
+        "type": "link in",
+        "z": "aac6175d7d1306af",
+        "name": "worldmap",
+        "links": [
+            "c61228de2670ec42"
+        ],
+        "x": 515,
+        "y": 420,
+        "wires": [
+            [
+                "9a80d68b0f6e767d"
+            ]
+        ]
+    },
+    {
+        "id": "d93c3d0b4e3910dc",
+        "type": "ui_text_input",
+        "z": "aac6175d7d1306af",
+        "name": "PLZInput",
+        "label": "PLZ/Ort (in Deutschland)",
+        "tooltip": "PLZ oder Ortsname",
+        "group": "ebca01fdcf4c84c2",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "msg",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "7c8bb19153926e29"
+            ]
+        ]
+    },
+    {
+        "id": "1df285cd679892f1",
+        "type": "ui_gauge",
+        "z": "aac6175d7d1306af",
+        "name": "",
+        "group": "ebca01fdcf4c84c2",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Temp",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "45",
+        "colors": [
+            "#204a87",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "25",
+        "className": "",
+        "x": 970,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f992595bc0a24b67",
+        "type": "link in",
+        "z": "aac6175d7d1306af",
+        "name": "",
+        "links": [
+            "67230b19bbe61dc2"
+        ],
+        "x": 575,
+        "y": 180,
+        "wires": [
+            [
+                "86df06a92406ea99",
+                "f36b6deb197a94ee",
+                "a6c50a506f85a24f",
+                "ece7d815f142d83a",
+                "d46feb7e48747778"
+            ]
+        ]
+    },
+    {
+        "id": "86df06a92406ea99",
+        "type": "change",
+        "z": "aac6175d7d1306af",
+        "name": "Temperatur",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 140,
+        "wires": [
+            [
+                "1df285cd679892f1"
+            ]
+        ]
+    },
+    {
+        "id": "0ff8ee0986b5e3f3",
+        "type": "ui_gauge",
+        "z": "aac6175d7d1306af",
+        "name": "",
+        "group": "ebca01fdcf4c84c2",
+        "order": 5,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Luftfeuchte",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#d3d7cf",
+            "#e6e600",
+            "#73d216"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 990,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f36b6deb197a94ee",
+        "type": "change",
+        "z": "aac6175d7d1306af",
+        "name": "Feuchtigkeit",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 180,
+        "wires": [
+            [
+                "0ff8ee0986b5e3f3"
+            ]
+        ]
+    },
+    {
+        "id": "330e8f747e3a9ef3",
+        "type": "ui_gauge",
+        "z": "aac6175d7d1306af",
+        "name": "",
+        "group": "ebca01fdcf4c84c2",
+        "order": 6,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Wind",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "220",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "40",
+        "seg2": "80",
+        "className": "",
+        "x": 970,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a6c50a506f85a24f",
+        "type": "change",
+        "z": "aac6175d7d1306af",
+        "name": "Wind",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(msg.payload.wind.speed*1.852,2)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 220,
+        "wires": [
+            [
+                "330e8f747e3a9ef3"
+            ]
+        ]
+    },
+    {
+        "id": "ece7d815f142d83a",
+        "type": "change",
+        "z": "aac6175d7d1306af",
+        "name": "Böigkeit",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round((msg.payload.wind.gust)/(msg.payload.wind.speed),1)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 260,
+        "wires": [
+            [
+                "4732e84196eb4d97"
+            ]
+        ]
+    },
+    {
+        "id": "9cb954cb15ecea63",
+        "type": "link in",
+        "z": "aac6175d7d1306af",
+        "name": "worldmap2",
+        "links": [
+            "23514177082cfebe",
+            "e489a5d11caaf54e",
+            "1b4fd8c1f439c6e4"
+        ],
+        "x": 515,
+        "y": 380,
+        "wires": [
+            [
+                "9a80d68b0f6e767d"
+            ]
+        ]
+    },
+    {
+        "id": "cdd17e960ef932b0",
+        "type": "ui_text",
+        "z": "aac6175d7d1306af",
+        "group": "ebca01fdcf4c84c2",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "Wetter",
+        "label": "Wetter",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d46feb7e48747778",
+        "type": "change",
+        "z": "aac6175d7d1306af",
+        "name": "Wetter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.weather[0].description",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 300,
+        "wires": [
+            [
+                "cdd17e960ef932b0"
+            ]
+        ]
+    },
+    {
+        "id": "e4e29e05aab3faee",
+        "type": "change",
+        "z": "aac6175d7d1306af",
+        "name": "planes_cached",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "flugzeuge",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 460,
+        "wires": [
+            [
+                "9a80d68b0f6e767d"
+            ]
+        ]
+    },
+    {
+        "id": "7a2b7a22934f5e77",
+        "type": "inject",
+        "z": "aac6175d7d1306af",
+        "name": "DWD",
+        "props": [
+            {
+                "p": "msg.payload.command.map",
+                "v": "{\"overlay\":\"DINGE\",\"url\":\"https://maps.dwd.de/geoserver/ows?\",\"opt\":{\"layers\":\"dwd:Natural_Earth_Map\"},\"wms\":true}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 330,
+        "y": 520,
+        "wires": [
+            [
+                "9a80d68b0f6e767d"
+            ]
+        ]
+    },
+    {
+        "id": "31594bd939aaf0b4",
+        "type": "comment",
+        "z": "aac6175d7d1306af",
+        "name": "WMS DWD",
+        "info": "https://maps.dwd.de/geoserver/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
+        "x": 490,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f96d2580f2990d32",
+        "type": "comment",
+        "z": "aac6175d7d1306af",
+        "name": "incidental social media",
+        "info": "Könnte man das nicht so umbauen, dass sich Leute hier zufällig treffen und schnacken können?\nSo wie damals mit ICQ und dem Plugin im Browser (war das schon Firefox?) Ende der 90er?\nDa wurde einem angezeigt, wer auch grad auf der Webseiteist, auf der man selber grad ist...\nBloß ne doofe Idee",
+        "x": 720,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "9a1c3012420b1f3f",
+        "type": "change",
+        "z": "aac6175d7d1306af",
+        "name": "ReloadButton",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"command\":{\"button\":{\"name\":\"Reload\",\"icon\":\"fa-refresh\",\"position\":\"bottomleft\"}}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 340,
+        "wires": [
+            [
+                "9a80d68b0f6e767d"
+            ]
+        ]
+    },
+    {
+        "id": "4b96010f406a80e3",
+        "type": "switch",
+        "z": "aac6175d7d1306af",
+        "name": "reload?",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "connected",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 260,
+        "y": 460,
+        "wires": [
+            [
+                "e4e29e05aab3faee",
+                "9a1c3012420b1f3f"
+            ],
+            [
+                "32c3bee7c9b24623"
+            ]
+        ]
+    },
+    {
+        "id": "7c8bb19153926e29",
+        "type": "change",
+        "z": "aac6175d7d1306af",
+        "name": "Ort merken",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lastsearch",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 120,
+        "wires": [
+            [
+                "6fe36e2b925a7b20"
+            ]
+        ]
+    },
+    {
+        "id": "32c3bee7c9b24623",
+        "type": "change",
+        "z": "aac6175d7d1306af",
+        "name": "letzte Suche",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "lastsearch",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "6fe36e2b925a7b20"
+            ]
+        ]
+    },
+    {
+        "id": "915efe8d90bfecc6",
+        "type": "worldmap in",
+        "z": "aac6175d7d1306af",
+        "name": "",
+        "path": "/worldmap",
+        "events": "connect,other",
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "4b96010f406a80e3"
+            ]
+        ]
+    },
+    {
+        "id": "9a80d68b0f6e767d",
+        "type": "ui_worldmap",
+        "z": "aac6175d7d1306af",
+        "group": "ebca01fdcf4c84c2",
+        "order": 3,
+        "width": 7,
+        "height": 6,
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMC",
+        "cluster": "0",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "RA",
+        "maplist": "OSMC,EsriC,EsriS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 700,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4732e84196eb4d97",
+        "type": "ui_level",
+        "z": "aac6175d7d1306af",
+        "group": "ebca01fdcf4c84c2",
+        "order": 7,
+        "width": 1,
+        "height": 2,
+        "name": "Böigkeit",
+        "label": "Böigkeit",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": "1",
+        "max": "3",
+        "segWarn": "1.5",
+        "segHigh": "2.5",
+        "unit": "",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": "1",
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": true,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 960,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "08f6746c834cc583",
+        "type": "worldmap in",
+        "z": "aac6175d7d1306af",
+        "name": "",
+        "path": "/worldmap",
+        "events": "other",
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "eaa2572edd4d3bd7"
+            ]
+        ]
+    },
+    {
+        "id": "eaa2572edd4d3bd7",
+        "type": "link out",
+        "z": "aac6175d7d1306af",
+        "name": "dunno",
+        "mode": "link",
+        "links": [
+            "0389d5f1cf13c9d7"
+        ],
+        "x": 225,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2e453c058cc6c036",
+        "type": "link in",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "links": [
+            "67230b19bbe61dc2"
+        ],
+        "x": 335,
+        "y": 240,
+        "wires": [
+            [
+                "6c7cb7d1dc4ac74f",
+                "deb0fbec775cd17d",
+                "ba7ab8a77826ea38",
+                "a663d6970f880948",
+                "bfd334877b06786c",
+                "38705fb149a883bb",
+                "305e8ae1c167259c",
+                "6919ea9b0230a3e1",
+                "b18a23116a1e80d6",
+                "1df9dfd98ec94e14",
+                "3838848941d286cf",
+                "17fee4f79719d90a",
+                "bbdae3f20170ac49",
+                "ce9581d25804466d"
+            ]
+        ]
+    },
+    {
+        "id": "96ad3a430cfbbef0",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Temp",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "45",
+        "colors": [
+            "#204a87",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "25",
+        "className": "",
+        "x": 770,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "6c7cb7d1dc4ac74f",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Temperatur",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "96ad3a430cfbbef0"
+            ]
+        ]
+    },
+    {
+        "id": "5d5884ef61f3faeb",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 13,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Luftfeuchte",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#d3d7cf",
+            "#e6e600",
+            "#73d216"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "deb0fbec775cd17d",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Feuchtigkeit",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "5d5884ef61f3faeb"
+            ]
+        ]
+    },
+    {
+        "id": "b8732db17f115780",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 8,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Wind",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "220",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "40",
+        "seg2": "80",
+        "className": "",
+        "x": 770,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ba7ab8a77826ea38",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Wind",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(msg.payload.wind.speed*1.852,2)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 260,
+        "wires": [
+            [
+                "b8732db17f115780"
+            ]
+        ]
+    },
+    {
+        "id": "a663d6970f880948",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Böigkeit",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round((msg.payload.wind.gust)/(msg.payload.wind.speed),1)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "dcde691fd504e48a"
+            ]
+        ]
+    },
+    {
+        "id": "acbed164499279c2",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "order": 17,
+        "width": 6,
+        "height": 1,
+        "name": "Wetter",
+        "label": "Wetter",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 770,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "bfd334877b06786c",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Wetter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.weather[0].description",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 520,
+        "wires": [
+            [
+                "acbed164499279c2"
+            ]
+        ]
+    },
+    {
+        "id": "38705fb149a883bb",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Icon",
+        "rules": [
+            {
+                "t": "set",
+                "p": "src",
+                "pt": "msg",
+                "to": "\"http://openweathermap.org/img/wn/\"&msg.payload.weather[0].icon&\"@2x.png\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31e4271723c3130b",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "gefühlt Temp",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "45",
+        "colors": [
+            "#204a87",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "25",
+        "className": "",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "305e8ae1c167259c",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Temperatur gefühlt",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.feels_like",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 140,
+        "wires": [
+            [
+                "31e4271723c3130b"
+            ]
+        ]
+    },
+    {
+        "id": "14f9f7a0811c07c3",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Luftdruck",
+        "label": "hPa",
+        "format": "{{value}}",
+        "min": "800",
+        "max": "1200",
+        "colors": [
+            "#729fcf",
+            "#3465a4",
+            "#204a87"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 780,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6919ea9b0230a3e1",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Luftdruck",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.pressure",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "14f9f7a0811c07c3"
+            ]
+        ]
+    },
+    {
+        "id": "b18a23116a1e80d6",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "min Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_min",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 600,
+        "wires": [
+            [
+                "9acf67142c18ddf4"
+            ]
+        ]
+    },
+    {
+        "id": "9acf67142c18ddf4",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "order": 19,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "min. Temp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 790,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "1df9dfd98ec94e14",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "max Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_max",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 640,
+        "wires": [
+            [
+                "16c9ed9dea7a81ac"
+            ]
+        ]
+    },
+    {
+        "id": "16c9ed9dea7a81ac",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "order": 20,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "max. Temp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 790,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "8006961d1cb9e0df",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 9,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Böen",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "220",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 770,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3838848941d286cf",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Böen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(msg.payload.wind.gust*1.852,2)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 340,
+        "wires": [
+            [
+                "8006961d1cb9e0df"
+            ]
+        ]
+    },
+    {
+        "id": "17fee4f79719d90a",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Windrichtung",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(msg.payload.wind.deg+180)%360",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 380,
+        "wires": [
+            [
+                "7bb9f827474c067b"
+            ]
+        ]
+    },
+    {
+        "id": "e2da578b63c61f1b",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 12,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "Regen",
+        "label": "mm/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 770,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "bbdae3f20170ac49",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Regen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rain[\"1h\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "e2da578b63c61f1b"
+            ]
+        ]
+    },
+    {
+        "id": "7bb9f827474c067b",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 7,
+        "width": 2,
+        "height": 2,
+        "gtype": "compass",
+        "title": "Windrichtung",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "589051cb2dbf4570",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "WetterOrt",
+        "label": "Ort",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 780,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ce9581d25804466d",
+        "type": "change",
+        "z": "09a43f806fd59071",
+        "name": "Ort",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 60,
+        "wires": [
+            [
+                "589051cb2dbf4570"
+            ]
+        ]
+    },
+    {
+        "id": "dcde691fd504e48a",
+        "type": "ui_level",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "order": 10,
+        "width": 1,
+        "height": 2,
+        "name": "Böigkeit",
+        "label": "Böigkeit",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": "1",
+        "max": "3",
+        "segWarn": "1.5",
+        "segHigh": "2.5",
+        "unit": "",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": "1",
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": true,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 780,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "0ea2f7a1e63406c1",
+        "type": "switch",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "property": "payload.layer",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "FlightRadar24",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 40,
+        "wires": [
+            [
+                "b208da8087832d56",
+                "de1ff0ce0d582c52",
+                "9393ca7ceb72e33f",
+                "992e37d47ec43944"
+            ]
+        ]
+    },
+    {
+        "id": "b89a6b70ddd30c79",
+        "type": "http request",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "authType": "",
+        "senderr": false,
+        "x": 690,
+        "y": 60,
+        "wires": [
+            [
+                "0f30a106af68927c",
+                "525831d9bf7f6531"
+            ]
+        ]
+    },
+    {
+        "id": "b208da8087832d56",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "\"https://www.jetphotos.com/registration/\"&msg.payload.name",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "b89a6b70ddd30c79"
+            ]
+        ]
+    },
+    {
+        "id": "0f30a106af68927c",
+        "type": "html",
+        "z": "32101b1a30d365e2",
+        "name": "scrapi",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "img.result__photo",
+        "ret": "attr",
+        "as": "single",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "1115d06270ae7f2a"
+            ]
+        ]
+    },
+    {
+        "id": "1115d06270ae7f2a",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "1. Bild",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"https:\"&payload[0].src",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "6e1b1049b1723961"
+            ]
+        ]
+    },
+    {
+        "id": "0f1ac282e4cbc069",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "FliegerBild",
+        "rules": [
+            {
+                "t": "set",
+                "p": "src",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 120,
+        "wires": [
+            [
+                "17c6664b9f4bb5a7",
+                "e2bccbbf37b6996d"
+            ]
+        ]
+    },
+    {
+        "id": "794b7048942df5fc",
+        "type": "ui_ui_control",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "events": "all",
+        "x": 980,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de1ff0ce0d582c52",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "auf JetPhoto Tab umschalten",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "JetPhoto",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "794b7048942df5fc"
+            ]
+        ]
+    },
+    {
+        "id": "22f19a9cb0f2a0f1",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Airline",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "93a633f332ddc9c9",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "airline_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[4]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 460,
+        "wires": [
+            [
+                "22f19a9cb0f2a0f1"
+            ]
+        ]
+    },
+    {
+        "id": "04425e60001fb4f6",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "origin_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.human[\"gestarted in\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 540,
+        "wires": [
+            [
+                "27db909b876bbe3b"
+            ]
+        ]
+    },
+    {
+        "id": "98c6d0cfc3e0a3e0",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "destination_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.human.Ziel",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 580,
+        "wires": [
+            [
+                "4726607b9953d5a2"
+            ]
+        ]
+    },
+    {
+        "id": "4726607b9953d5a2",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Ziel",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "27db909b876bbe3b",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Start",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "f742ab7231564664",
+        "type": "ui_button",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Zurück",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Home\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 810,
+        "y": 300,
+        "wires": [
+            [
+                "a26e9c1ad872c3ef",
+                "794b7048942df5fc"
+            ]
+        ]
+    },
+    {
+        "id": "a26e9c1ad872c3ef",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "worldmap aus cache",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "flugzeuge",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "reconnect",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 320,
+        "wires": [
+            [
+                "0a2e192e318dec62"
+            ]
+        ]
+    },
+    {
+        "id": "1b4fd8c1f439c6e4",
+        "type": "link out",
+        "z": "32101b1a30d365e2",
+        "name": "plane_cache_out",
+        "mode": "link",
+        "links": [
+            "0d789208a62f882f",
+            "9cb954cb15ecea63",
+            "a91a5cb8bc74d6c5"
+        ],
+        "x": 995,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0a2e192e318dec62",
+        "type": "split",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 830,
+        "y": 360,
+        "wires": [
+            [
+                "1b4fd8c1f439c6e4"
+            ]
+        ]
+    },
+    {
+        "id": "9393ca7ceb72e33f",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "squawk_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.squawkCode",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "6a335d63d34bd5a8"
+            ]
+        ]
+    },
+    {
+        "id": "808e272d36d5bdde",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Squawk",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 540,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6a335d63d34bd5a8",
+        "type": "switch",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0037",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0020",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0023",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0024",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0025",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0036",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2000",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1000",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7000",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 10,
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "9b82748b791aa9f7"
+            ],
+            [
+                "0fab3829afc0a5c6"
+            ],
+            [
+                "968d186880b0f6a8"
+            ],
+            [
+                "566d433ed1efde0d"
+            ],
+            [
+                "6cb8fa2dfbc31502"
+            ],
+            [
+                "4af52f12c72aa479"
+            ],
+            [
+                "21e4e0f2fb1e400e"
+            ],
+            [
+                "4963e17ec0006fdd"
+            ],
+            [
+                "f75aa08471760ff7"
+            ],
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "9b82748b791aa9f7",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0037",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Einsatzflüge der Polizei mit Restlichtverstärker",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 480,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "0fab3829afc0a5c6",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0020",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Rettungsflug",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 560,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "4af52f12c72aa479",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0036",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Einsatzflug Polizei",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 520,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "4963e17ec0006fdd",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "1000",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "IFR / Mode S Transponder Code",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 760,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "f75aa08471760ff7",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "7000",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Privat VFR",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 860,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "6cb8fa2dfbc31502",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0025",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Fallschirmspringer",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 720,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "566d433ed1efde0d",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0024",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "mil. Nachtkonturenflug",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 680,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "21e4e0f2fb1e400e",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "2000",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "mil. Nachttiefflug",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 800,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "968d186880b0f6a8",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0023",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Einsatzflüge der Bundespolizei",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 640,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "992e37d47ec43944",
+        "type": "function",
+        "z": "32101b1a30d365e2",
+        "name": "cleanUpHuman",
+        "func": "msg.payload.human.airline = msg.payload.human.airline ||\"N/A\"\nmsg.payload.human.airline = msg.payload.human.airline || \"N/A\"\nmsg.payload.human.Ziel = msg.payload.human.Ziel || \"N/A\"\nmsg.payload.human[\"gestarted in\"] = msg.payload.human[\"gestarted in\"] || \"N/A\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 400,
+        "wires": [
+            [
+                "04425e60001fb4f6",
+                "98c6d0cfc3e0a3e0"
+            ]
+        ]
+    },
+    {
+        "id": "525831d9bf7f6531",
+        "type": "html",
+        "z": "32101b1a30d365e2",
+        "name": "airline 1.Bild",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "li.result__infoListItem>span>a",
+        "ret": "text",
+        "as": "single",
+        "x": 810,
+        "y": 420,
+        "wires": [
+            [
+                "93a633f332ddc9c9",
+                "cb7be853448ac0a3"
+            ]
+        ]
+    },
+    {
+        "id": "75a4854936fa2ae3",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Typ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "cb7be853448ac0a3",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "typ_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[1]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 500,
+        "wires": [
+            [
+                "75a4854936fa2ae3"
+            ]
+        ]
+    },
+    {
+        "id": "6e1b1049b1723961",
+        "type": "switch",
+        "z": "32101b1a30d365e2",
+        "name": "kein_bild",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "https:",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 520,
+        "y": 180,
+        "wires": [
+            [
+                "83b50b971a3b96b4"
+            ],
+            [
+                "0f1ac282e4cbc069"
+            ]
+        ]
+    },
+    {
+        "id": "83b50b971a3b96b4",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "platzhalterbild",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "https://upload.wikimedia.org/wikipedia/commons/7/75/No_image_available.png",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "src",
+                "pt": "msg",
+                "to": "https://upload.wikimedia.org/wikipedia/commons/7/75/No_image_available.png",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 160,
+        "wires": [
+            [
+                "17c6664b9f4bb5a7",
+                "e2bccbbf37b6996d"
+            ]
+        ]
+    },
+    {
+        "id": "17c6664b9f4bb5a7",
+        "type": "image viewer",
+        "z": "32101b1a30d365e2",
+        "name": "vorschau",
+        "width": "120",
+        "data": "payload",
+        "dataType": "msg",
+        "active": true,
+        "x": 920,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2bccbbf37b6996d",
+        "type": "ui_media",
+        "z": "32101b1a30d365e2",
+        "group": "c2f0c7f8a9fe136e",
+        "name": "JetPhotoImage",
+        "width": 0,
+        "height": 0,
+        "order": 1,
+        "category": "platzhalter",
+        "file": "keinbild.jpg",
+        "layout": "center",
+        "showcontrols": false,
+        "loop": false,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 920,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0389d5f1cf13c9d7",
+        "type": "link in",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "links": [
+            "eaa2572edd4d3bd7"
+        ],
+        "x": 85,
+        "y": 40,
+        "wires": [
+            [
+                "0ea2f7a1e63406c1"
+            ]
+        ]
+    },
+    {
+        "id": "82bc22cb.914be",
+        "type": "http in",
+        "z": "825cb57ac6686b96",
+        "name": "",
+        "url": "/webgl",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "ab9b0e5e.f8f8b"
+            ]
+        ]
+    },
+    {
+        "id": "6752712.7f98a9",
+        "type": "http response",
+        "z": "825cb57ac6686b96",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 705,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ab9b0e5e.f8f8b",
+        "type": "template",
+        "z": "825cb57ac6686b96",
+        "name": "three.js",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n<head>\n\n    <title>three.js in node-red</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n<style>\nbody {background-color: powderblue;}\n</style>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n<body>\n\t<canvas class=\"webgl\"></canvas>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js\"></script>\n<script src=\"https://unpkg.com/three@0.134.0/examples/js/loaders/OBJLoader.js\"></script>\n<script src=\"./webgl.js\"></script>\n</body>\n\n",
+        "output": "str",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "f195cd.89a76a3"
+            ]
+        ]
+    },
+    {
+        "id": "f195cd.89a76a3",
+        "type": "change",
+        "z": "825cb57ac6686b96",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.Access-Control-Allow-Origin",
+                "pt": "msg",
+                "to": "*",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 160,
+        "wires": [
+            [
+                "6752712.7f98a9"
+            ]
+        ]
+    }
+]
