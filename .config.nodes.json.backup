@@ -642,34 +642,6 @@
                 "module": "node-red-dashboard",
                 "file": "/home/peter/.node-red/node_modules/node-red-dashboard/nodes/ui_spacer.js"
             }
-<<<<<<< HEAD
-        }
-    },
-    "node-red-contrib-os": {
-        "name": "node-red-contrib-os",
-        "version": "0.2.1",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "os": {
-                "name": "os",
-                "types": [
-                    "OS",
-                    "Drives",
-                    "Uptime",
-                    "CPUs",
-                    "Loadavg",
-                    "Memory",
-                    "NetworkIntf"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-os",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-os/os/os.js"
-            }
-=======
->>>>>>> webgl
         }
     },
     "node-red-contrib-flightradar24": {
@@ -791,25 +763,6 @@
                 "user": false,
                 "module": "node-red-contrib-ui-level",
                 "file": "/home/peter/.node-red/node_modules/node-red-contrib-ui-level/ui-level.js"
-            }
-        }
-    },
-    "node-red-contrib-ui-media": {
-        "name": "node-red-contrib-ui-media",
-        "version": "1.2.0",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "ui_media": {
-                "name": "ui_media",
-                "types": [
-                    "ui_media"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-ui-media",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-ui-media/ui_media.js"
             }
         }
     }
