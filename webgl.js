@@ -1,8 +1,7 @@
 // import './style.css';
 // import * as THREE from 'three';
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 // import * as dat from 'dat.gui';
-
+import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
 // Loading
 const textureLoader = new THREE.TextureLoader();
 const normalTexture = textureLoader.load('ball_Normal.png');
@@ -152,8 +151,8 @@ cameraFolderRot.add(camera.rotation, 'y').min(-90).max(90).step(0.001);
 cameraFolderRot.add(camera.rotation, 'z').min(-90).max(90).step(0.001);
 
 // Controls
-// const controls = new OrbitControls(camera, canvas)
-// controls.enableDamping = true
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
 
 /**
  * Animate
