@@ -642,6 +642,7 @@
                 "module": "node-red-dashboard",
                 "file": "/home/peter/.node-red/node_modules/node-red-dashboard/nodes/ui_spacer.js"
             }
+<<<<<<< HEAD
         }
     },
     "node-red-contrib-os": {
@@ -667,6 +668,8 @@
                 "module": "node-red-contrib-os",
                 "file": "/home/peter/.node-red/node_modules/node-red-contrib-os/os/os.js"
             }
+=======
+>>>>>>> webgl
         }
     },
     "node-red-contrib-flightradar24": {
@@ -708,25 +711,6 @@
                 "user": false,
                 "module": "node-red-contrib-web-worldmap",
                 "file": "/home/peter/.node-red/node_modules/node-red-contrib-web-worldmap/worldmap.js"
-            }
-        }
-    },
-    "node-red-contrib-ui-media": {
-        "name": "node-red-contrib-ui-media",
-        "version": "1.2.0",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "ui_media": {
-                "name": "ui_media",
-                "types": [
-                    "ui_media"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-ui-media",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-ui-media/ui_media.js"
             }
         }
     },
@@ -810,81 +794,22 @@
             }
         }
     },
-    "node-red-contrib-linux-diskio": {
-        "name": "node-red-contrib-linux-diskio",
-        "version": "0.2.1",
+    "node-red-contrib-ui-media": {
+        "name": "node-red-contrib-ui-media",
+        "version": "1.2.0",
         "local": true,
         "user": true,
         "nodes": {
-            "diskio": {
-                "name": "diskio",
+            "ui_media": {
+                "name": "ui_media",
                 "types": [
-                    "diskio"
+                    "ui_media"
                 ],
                 "enabled": true,
                 "local": true,
                 "user": false,
-                "module": "node-red-contrib-linux-diskio",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-linux-diskio/diskio.js"
-            }
-        }
-    },
-    "node-red-contrib-linux-memory": {
-        "name": "node-red-contrib-linux-memory",
-        "version": "0.8.1",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "memory": {
-                "name": "memory",
-                "types": [
-                    "memory"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-linux-memory",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-linux-memory/memory.js"
-            }
-        }
-    },
-    "node-red-contrib-linux-network-stats": {
-        "name": "node-red-contrib-linux-network-stats",
-        "version": "0.2.1",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "network_stats": {
-                "name": "network_stats",
-                "types": [
-                    "network_stats"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-linux-network-stats",
-                "file": "/home/peter/.node-red/node_modules/node-red-contrib-linux-network-stats/network-stats.js"
-            }
-        }
-    },
-    "node-red-node-email-variable": {
-        "name": "node-red-node-email-variable",
-        "version": "1.0.3",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "email": {
-                "name": "email",
-                "types": [
-                    "e-mail",
-                    "e-mail in",
-                    "e-mail mta"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-node-email-variable",
-                "file": "/home/peter/.node-red/node_modules/node-red-node-email-variable/variable-email.js"
+                "module": "node-red-contrib-ui-media",
+                "file": "/home/peter/.node-red/node_modules/node-red-contrib-ui-media/ui_media.js"
             }
         }
     }

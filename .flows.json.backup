@@ -192,6 +192,24 @@
         "hidden": false
     },
     {
+        "id": "9de11e6f8cf437c5",
+        "type": "ui_tab",
+        "name": "Wetter",
+        "icon": "fa-thermometer-three-quarters fa-2x",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "aa65e6bafd4cc3c0",
+        "type": "ui_tab",
+        "name": "JetPhoto",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": true
+    },
+    {
         "id": "ae559b234acc86eb",
         "type": "ui_group",
         "name": "Systemanzeigen",
@@ -214,15 +232,6 @@
         "className": ""
     },
     {
-        "id": "9de11e6f8cf437c5",
-        "type": "ui_tab",
-        "name": "Wetter",
-        "icon": "fa-thermometer-three-quarters fa-2x",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "ebca01fdcf4c84c2",
         "type": "ui_group",
         "name": "PLZ",
@@ -230,6 +239,17 @@
         "order": 1,
         "disp": true,
         "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c2f0c7f8a9fe136e",
+        "type": "ui_group",
+        "name": "PlaneInfo",
+        "tab": "aa65e6bafd4cc3c0",
+        "order": 1,
+        "disp": false,
+        "width": "6",
         "collapse": false,
         "className": ""
     },
@@ -304,6 +324,7 @@
         "height": 1
     },
     {
+<<<<<<< HEAD
         "id": "aa65e6bafd4cc3c0",
         "type": "ui_tab",
         "name": "JetPhoto",
@@ -368,6 +389,8 @@
         ]
     },
     {
+=======
+>>>>>>> webgl
         "id": "c08d642138bd52ba",
         "type": "inject",
         "z": "2b499fb43b7c09b4",
@@ -394,50 +417,6 @@
                 "a03d87b7ccb4402e",
                 "041a15bcc4d0b1b4"
             ]
-        ]
-    },
-    {
-        "id": "8e84347da9e68968",
-        "type": "ui_chart",
-        "z": "2b499fb43b7c09b4",
-        "name": "",
-        "group": "ae559b234acc86eb",
-        "order": 4,
-        "width": "3",
-        "height": "3",
-        "label": "Load Avg",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "bezier",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#edd400",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 840,
-        "y": 80,
-        "wires": [
-            []
         ]
     },
     {
@@ -1391,40 +1370,6 @@
         ]
     },
     {
-        "id": "22c544473eb2c26a",
-        "type": "ui_switch",
-        "z": "b7b534fbe43e027d",
-        "name": "",
-        "label": "Flieger",
-        "tooltip": "",
-        "group": "ebca01fdcf4c84c2",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 290,
-        "y": 340,
-        "wires": [
-            [
-                "23c4a57834ffc53c"
-            ]
-        ]
-    },
-    {
         "id": "b7cd5b04013d3c39",
         "type": "file in",
         "z": "b7b534fbe43e027d",
@@ -1749,59 +1694,6 @@
         ]
     },
     {
-        "id": "d93c3d0b4e3910dc",
-        "type": "ui_text_input",
-        "z": "aac6175d7d1306af",
-        "name": "PLZInput",
-        "label": "PLZ/Ort (in Deutschland)",
-        "tooltip": "PLZ oder Ortsname",
-        "group": "ebca01fdcf4c84c2",
-        "order": 1,
-        "width": "4",
-        "height": "1",
-        "passthru": false,
-        "mode": "text",
-        "delay": "0",
-        "topic": "topic",
-        "sendOnBlur": false,
-        "className": "",
-        "topicType": "msg",
-        "x": 100,
-        "y": 120,
-        "wires": [
-            [
-                "7c8bb19153926e29"
-            ]
-        ]
-    },
-    {
-        "id": "1df285cd679892f1",
-        "type": "ui_gauge",
-        "z": "aac6175d7d1306af",
-        "name": "",
-        "group": "ebca01fdcf4c84c2",
-        "order": 4,
-        "width": 2,
-        "height": 2,
-        "gtype": "gage",
-        "title": "Temp",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": "-20",
-        "max": "45",
-        "colors": [
-            "#204a87",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "10",
-        "seg2": "25",
-        "className": "",
-        "x": 970,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "f992595bc0a24b67",
         "type": "link in",
         "z": "aac6175d7d1306af",
@@ -1849,33 +1741,6 @@
         ]
     },
     {
-        "id": "0ff8ee0986b5e3f3",
-        "type": "ui_gauge",
-        "z": "aac6175d7d1306af",
-        "name": "",
-        "group": "ebca01fdcf4c84c2",
-        "order": 5,
-        "width": 2,
-        "height": 2,
-        "gtype": "gage",
-        "title": "Luftfeuchte",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#d3d7cf",
-            "#e6e600",
-            "#73d216"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 990,
-        "y": 180,
-        "wires": []
-    },
-    {
         "id": "f36b6deb197a94ee",
         "type": "change",
         "z": "aac6175d7d1306af",
@@ -1901,33 +1766,6 @@
                 "0ff8ee0986b5e3f3"
             ]
         ]
-    },
-    {
-        "id": "330e8f747e3a9ef3",
-        "type": "ui_gauge",
-        "z": "aac6175d7d1306af",
-        "name": "",
-        "group": "ebca01fdcf4c84c2",
-        "order": 6,
-        "width": 2,
-        "height": 2,
-        "gtype": "gage",
-        "title": "Wind",
-        "label": "km/h",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "220",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#e60000"
-        ],
-        "seg1": "40",
-        "seg2": "80",
-        "className": "",
-        "x": 970,
-        "y": 220,
-        "wires": []
     },
     {
         "id": "a6c50a506f85a24f",
@@ -2000,23 +1838,6 @@
                 "9a80d68b0f6e767d"
             ]
         ]
-    },
-    {
-        "id": "cdd17e960ef932b0",
-        "type": "ui_text",
-        "z": "aac6175d7d1306af",
-        "group": "ebca01fdcf4c84c2",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "name": "Wetter",
-        "label": "Wetter",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 970,
-        "y": 300,
-        "wires": []
     },
     {
         "id": "d46feb7e48747778",
@@ -2237,6 +2058,19 @@
         ]
     },
     {
+        "id": "eaa2572edd4d3bd7",
+        "type": "link out",
+        "z": "aac6175d7d1306af",
+        "name": "dunno",
+        "mode": "link",
+        "links": [
+            "0389d5f1cf13c9d7"
+        ],
+        "x": 225,
+        "y": 60,
+        "wires": []
+    },
+    {
         "id": "915efe8d90bfecc6",
         "type": "worldmap in",
         "z": "aac6175d7d1306af",
@@ -2248,6 +2082,21 @@
         "wires": [
             [
                 "4b96010f406a80e3"
+            ]
+        ]
+    },
+    {
+        "id": "08f6746c834cc583",
+        "type": "worldmap in",
+        "z": "aac6175d7d1306af",
+        "name": "",
+        "path": "/worldmap",
+        "events": "other",
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "eaa2572edd4d3bd7"
             ]
         ]
     },
@@ -2285,6 +2134,21 @@
         "x": 700,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "17c6664b9f4bb5a7",
+        "type": "image viewer",
+        "z": "aac6175d7d1306af",
+        "name": "vorschau",
+        "width": "120",
+        "data": "payload",
+        "dataType": "msg",
+        "active": true,
+        "x": 920,
+        "y": 140,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "4732e84196eb4d97",
@@ -2329,32 +2193,118 @@
         "wires": []
     },
     {
-        "id": "08f6746c834cc583",
-        "type": "worldmap in",
+        "id": "dcde691fd504e48a",
+        "type": "ui_level",
         "z": "aac6175d7d1306af",
+        "group": "b38b00e078ff3c09",
+        "order": 10,
+        "width": 1,
+        "height": 2,
+        "name": "Böigkeit",
+        "label": "Böigkeit",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": "1",
+        "max": "3",
+        "segWarn": "1.5",
+        "segHigh": "2.5",
+        "unit": "",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": "1",
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": true,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 780,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "13d5e4a8e83fad2a",
+        "type": "ui_media",
+        "z": "aac6175d7d1306af",
+        "group": "b38b00e078ff3c09",
         "name": "",
-        "path": "/worldmap",
-        "events": "other",
-        "x": 100,
-        "y": 60,
+        "width": 0,
+        "height": 0,
+        "order": 20,
+        "category": "",
+        "file": "",
+        "layout": "adjust",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 780,
+        "y": 560,
         "wires": [
-            [
-                "eaa2572edd4d3bd7"
-            ]
+            []
         ]
     },
     {
-        "id": "eaa2572edd4d3bd7",
-        "type": "link out",
+        "id": "e2bccbbf37b6996d",
+        "type": "ui_media",
         "z": "aac6175d7d1306af",
-        "name": "dunno",
-        "mode": "link",
-        "links": [
-            "0389d5f1cf13c9d7"
-        ],
-        "x": 225,
-        "y": 60,
-        "wires": []
+        "group": "c2f0c7f8a9fe136e",
+        "name": "JetPhotoImage",
+        "width": 0,
+        "height": 0,
+        "order": 1,
+        "category": "platzhalter",
+        "file": "keinbild.jpg",
+        "layout": "center",
+        "showcontrols": false,
+        "loop": false,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 920,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a856fbf2b42ac308",
+        "type": "ui_text_input",
+        "z": "aac6175d7d1306af",
+        "name": "PLZInput",
+        "label": "PLZ/Ort (in Deutschland)",
+        "tooltip": "PLZ oder Ortsname",
+        "group": "ebca01fdcf4c84c2",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "msg",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "7c8bb19153926e29"
+            ]
+        ]
     },
     {
         "id": "2e453c058cc6c036",
@@ -2386,33 +2336,6 @@
         ]
     },
     {
-        "id": "96ad3a430cfbbef0",
-        "type": "ui_gauge",
-        "z": "09a43f806fd59071",
-        "name": "",
-        "group": "b38b00e078ff3c09",
-        "order": 2,
-        "width": 2,
-        "height": 2,
-        "gtype": "gage",
-        "title": "Temp",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": "-20",
-        "max": "45",
-        "colors": [
-            "#204a87",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "10",
-        "seg2": "25",
-        "className": "",
-        "x": 770,
-        "y": 180,
-        "wires": []
-    },
-    {
         "id": "6c7cb7d1dc4ac74f",
         "type": "change",
         "z": "09a43f806fd59071",
@@ -2440,33 +2363,6 @@
         ]
     },
     {
-        "id": "5d5884ef61f3faeb",
-        "type": "ui_gauge",
-        "z": "09a43f806fd59071",
-        "name": "",
-        "group": "b38b00e078ff3c09",
-        "order": 13,
-        "width": 2,
-        "height": 2,
-        "gtype": "gage",
-        "title": "Luftfeuchte",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#d3d7cf",
-            "#e6e600",
-            "#73d216"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 790,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "deb0fbec775cd17d",
         "type": "change",
         "z": "09a43f806fd59071",
@@ -2492,33 +2388,6 @@
                 "5d5884ef61f3faeb"
             ]
         ]
-    },
-    {
-        "id": "b8732db17f115780",
-        "type": "ui_gauge",
-        "z": "09a43f806fd59071",
-        "name": "",
-        "group": "b38b00e078ff3c09",
-        "order": 8,
-        "width": 2,
-        "height": 2,
-        "gtype": "gage",
-        "title": "Wind",
-        "label": "km/h",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "220",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#e60000"
-        ],
-        "seg1": "40",
-        "seg2": "80",
-        "className": "",
-        "x": 770,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "ba7ab8a77826ea38",
@@ -2575,23 +2444,6 @@
         ]
     },
     {
-        "id": "acbed164499279c2",
-        "type": "ui_text",
-        "z": "09a43f806fd59071",
-        "group": "b38b00e078ff3c09",
-        "order": 17,
-        "width": 6,
-        "height": 1,
-        "name": "Wetter",
-        "label": "Wetter",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 770,
-        "y": 520,
-        "wires": []
-    },
-    {
         "id": "bfd334877b06786c",
         "type": "change",
         "z": "09a43f806fd59071",
@@ -2640,35 +2492,10 @@
         "x": 530,
         "y": 560,
         "wires": [
-            []
+            [
+                "13d5e4a8e83fad2a"
+            ]
         ]
-    },
-    {
-        "id": "31e4271723c3130b",
-        "type": "ui_gauge",
-        "z": "09a43f806fd59071",
-        "name": "",
-        "group": "b38b00e078ff3c09",
-        "order": 3,
-        "width": 2,
-        "height": 2,
-        "gtype": "gage",
-        "title": "gefühlt Temp",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": "-20",
-        "max": "45",
-        "colors": [
-            "#204a87",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "10",
-        "seg2": "25",
-        "className": "",
-        "x": 790,
-        "y": 140,
-        "wires": []
     },
     {
         "id": "305e8ae1c167259c",
@@ -2696,33 +2523,6 @@
                 "31e4271723c3130b"
             ]
         ]
-    },
-    {
-        "id": "14f9f7a0811c07c3",
-        "type": "ui_gauge",
-        "z": "09a43f806fd59071",
-        "name": "",
-        "group": "b38b00e078ff3c09",
-        "order": 4,
-        "width": 2,
-        "height": 2,
-        "gtype": "gage",
-        "title": "Luftdruck",
-        "label": "hPa",
-        "format": "{{value}}",
-        "min": "800",
-        "max": "1200",
-        "colors": [
-            "#729fcf",
-            "#3465a4",
-            "#204a87"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 780,
-        "y": 100,
-        "wires": []
     },
     {
         "id": "6919ea9b0230a3e1",
@@ -2779,23 +2579,6 @@
         ]
     },
     {
-        "id": "9acf67142c18ddf4",
-        "type": "ui_text",
-        "z": "09a43f806fd59071",
-        "group": "b38b00e078ff3c09",
-        "order": 19,
-        "width": 3,
-        "height": 1,
-        "name": "",
-        "label": "min. Temp",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 790,
-        "y": 600,
-        "wires": []
-    },
-    {
         "id": "1df9dfd98ec94e14",
         "type": "change",
         "z": "09a43f806fd59071",
@@ -2821,50 +2604,6 @@
                 "16c9ed9dea7a81ac"
             ]
         ]
-    },
-    {
-        "id": "16c9ed9dea7a81ac",
-        "type": "ui_text",
-        "z": "09a43f806fd59071",
-        "group": "b38b00e078ff3c09",
-        "order": 20,
-        "width": 3,
-        "height": 1,
-        "name": "",
-        "label": "max. Temp",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 790,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "8006961d1cb9e0df",
-        "type": "ui_gauge",
-        "z": "09a43f806fd59071",
-        "name": "",
-        "group": "b38b00e078ff3c09",
-        "order": 9,
-        "width": 2,
-        "height": 2,
-        "gtype": "gage",
-        "title": "Böen",
-        "label": "km/h",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "220",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#e60000"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 770,
-        "y": 340,
-        "wires": []
     },
     {
         "id": "3838848941d286cf",
@@ -2921,33 +2660,6 @@
         ]
     },
     {
-        "id": "e2da578b63c61f1b",
-        "type": "ui_gauge",
-        "z": "09a43f806fd59071",
-        "name": "",
-        "group": "b38b00e078ff3c09",
-        "order": 12,
-        "width": 2,
-        "height": 2,
-        "gtype": "wave",
-        "title": "Regen",
-        "label": "mm/h",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "5",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#e60000"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 770,
-        "y": 440,
-        "wires": []
-    },
-    {
         "id": "bbdae3f20170ac49",
         "type": "change",
         "z": "09a43f806fd59071",
@@ -2973,50 +2685,6 @@
                 "e2da578b63c61f1b"
             ]
         ]
-    },
-    {
-        "id": "7bb9f827474c067b",
-        "type": "ui_gauge",
-        "z": "09a43f806fd59071",
-        "name": "",
-        "group": "b38b00e078ff3c09",
-        "order": 7,
-        "width": 2,
-        "height": 2,
-        "gtype": "compass",
-        "title": "Windrichtung",
-        "label": "°",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "360",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#e60000"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 790,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "589051cb2dbf4570",
-        "type": "ui_text",
-        "z": "09a43f806fd59071",
-        "group": "b38b00e078ff3c09",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "name": "WetterOrt",
-        "label": "Ort",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "x": 780,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "ce9581d25804466d",
@@ -3046,46 +2714,722 @@
         ]
     },
     {
-        "id": "dcde691fd504e48a",
-        "type": "ui_level",
+        "id": "f742ab7231564664",
+        "type": "ui_button",
         "z": "09a43f806fd59071",
-        "group": "b38b00e078ff3c09",
-        "order": 10,
-        "width": 1,
-        "height": 2,
-        "name": "Böigkeit",
-        "label": "Böigkeit",
-        "colorHi": "#e60000",
-        "colorWarn": "#ff9900",
-        "colorNormal": "#00b33c",
-        "colorOff": "#595959",
-        "min": "1",
-        "max": "3",
-        "segWarn": "1.5",
-        "segHigh": "2.5",
-        "unit": "",
-        "layout": "sv",
-        "channelA": "",
-        "channelB": "",
-        "decimals": "1",
-        "animations": "soft",
-        "shape": 2,
-        "colorschema": "fixed",
-        "textoptions": "default",
-        "colorText": "#eeeeee",
-        "fontLabel": "",
-        "fontValue": "",
-        "fontSmall": "",
-        "colorFromTheme": true,
-        "textAnimations": false,
-        "hideValue": true,
-        "tickmode": "off",
-        "peakmode": false,
-        "property": "payload",
-        "peaktime": 3000,
-        "x": 780,
+        "name": "",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Zurück",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Home\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 810,
+        "y": 300,
+        "wires": [
+            [
+                "a26e9c1ad872c3ef",
+                "794b7048942df5fc"
+            ]
+        ]
+    },
+    {
+        "id": "22c544473eb2c26a",
+        "type": "ui_switch",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "label": "Flieger",
+        "tooltip": "",
+        "group": "ebca01fdcf4c84c2",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "23c4a57834ffc53c"
+            ]
+        ]
+    },
+    {
+        "id": "cdd17e960ef932b0",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "ebca01fdcf4c84c2",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "Wetter",
+        "label": "Wetter",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "acbed164499279c2",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "order": 17,
+        "width": 6,
+        "height": 1,
+        "name": "Wetter",
+        "label": "Wetter",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 770,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "9acf67142c18ddf4",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "order": 19,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "min. Temp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 790,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "16c9ed9dea7a81ac",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "order": 20,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "max. Temp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 790,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "589051cb2dbf4570",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "b38b00e078ff3c09",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "WetterOrt",
+        "label": "Ort",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 780,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "22f19a9cb0f2a0f1",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Airline",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4726607b9953d5a2",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Ziel",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "27db909b876bbe3b",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Start",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "808e272d36d5bdde",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Squawk",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 540,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "75a4854936fa2ae3",
+        "type": "ui_text",
+        "z": "09a43f806fd59071",
+        "group": "c2f0c7f8a9fe136e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Typ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "1df285cd679892f1",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "ebca01fdcf4c84c2",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Temp",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "45",
+        "colors": [
+            "#204a87",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "25",
+        "className": "",
+        "x": 970,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0ff8ee0986b5e3f3",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "ebca01fdcf4c84c2",
+        "order": 5,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Luftfeuchte",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#d3d7cf",
+            "#e6e600",
+            "#73d216"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 990,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "330e8f747e3a9ef3",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "ebca01fdcf4c84c2",
+        "order": 6,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Wind",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "220",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "40",
+        "seg2": "80",
+        "className": "",
+        "x": 970,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "96ad3a430cfbbef0",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Temp",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "45",
+        "colors": [
+            "#204a87",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "25",
+        "className": "",
+        "x": 770,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5d5884ef61f3faeb",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 13,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Luftfeuchte",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#d3d7cf",
+            "#e6e600",
+            "#73d216"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b8732db17f115780",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 8,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Wind",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "220",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "40",
+        "seg2": "80",
+        "className": "",
+        "x": 770,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "31e4271723c3130b",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "gefühlt Temp",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "45",
+        "colors": [
+            "#204a87",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "25",
+        "className": "",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "14f9f7a0811c07c3",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Luftdruck",
+        "label": "hPa",
+        "format": "{{value}}",
+        "min": "800",
+        "max": "1200",
+        "colors": [
+            "#729fcf",
+            "#3465a4",
+            "#204a87"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 780,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8006961d1cb9e0df",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 9,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "Böen",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "220",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 770,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e2da578b63c61f1b",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 12,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "Regen",
+        "label": "mm/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 770,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "7bb9f827474c067b",
+        "type": "ui_gauge",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 7,
+        "width": 2,
+        "height": 2,
+        "gtype": "compass",
+        "title": "Windrichtung",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "090866092f482bb7",
+        "type": "ui_chart",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 7,
+        "width": "3",
+        "height": "3",
+        "label": "Memory",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 580,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2b2a3be8f49e2c0",
+        "type": "ui_chart",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 8,
+        "width": "3",
+        "height": "3",
+        "label": "Netzwerch",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#fce94f",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "060bab8db67160ea",
+        "type": "ui_chart",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 3,
+        "width": "3",
+        "height": "3",
+        "label": "Disk IO",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#73d216",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e84347da9e68968",
+        "type": "ui_chart",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 4,
+        "width": "3",
+        "height": "3",
+        "label": "Load Avg",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#edd400",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 840,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "794b7048942df5fc",
+        "type": "ui_ui_control",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "events": "all",
+        "x": 980,
+        "y": 280,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "0ea2f7a1e63406c1",
@@ -3237,18 +3581,6 @@
         ]
     },
     {
-        "id": "794b7048942df5fc",
-        "type": "ui_ui_control",
-        "z": "32101b1a30d365e2",
-        "name": "",
-        "events": "all",
-        "x": 980,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "de1ff0ce0d582c52",
         "type": "change",
         "z": "32101b1a30d365e2",
@@ -3274,23 +3606,6 @@
                 "794b7048942df5fc"
             ]
         ]
-    },
-    {
-        "id": "22f19a9cb0f2a0f1",
-        "type": "ui_text",
-        "z": "32101b1a30d365e2",
-        "group": "c2f0c7f8a9fe136e",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Airline",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1030,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "93a633f332ddc9c9",
@@ -3370,69 +3685,6 @@
         "wires": [
             [
                 "4726607b9953d5a2"
-            ]
-        ]
-    },
-    {
-        "id": "4726607b9953d5a2",
-        "type": "ui_text",
-        "z": "32101b1a30d365e2",
-        "group": "c2f0c7f8a9fe136e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Ziel",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1030,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "27db909b876bbe3b",
-        "type": "ui_text",
-        "z": "32101b1a30d365e2",
-        "group": "c2f0c7f8a9fe136e",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Start",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1030,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "f742ab7231564664",
-        "type": "ui_button",
-        "z": "32101b1a30d365e2",
-        "name": "",
-        "group": "c2f0c7f8a9fe136e",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Zurück",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "{\"tab\":\"Home\"}",
-        "payloadType": "json",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 810,
-        "y": 300,
-        "wires": [
-            [
-                "a26e9c1ad872c3ef",
-                "794b7048942df5fc"
             ]
         ]
     },
@@ -3530,23 +3782,6 @@
                 "6a335d63d34bd5a8"
             ]
         ]
-    },
-    {
-        "id": "808e272d36d5bdde",
-        "type": "ui_text",
-        "z": "32101b1a30d365e2",
-        "group": "c2f0c7f8a9fe136e",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Squawk",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 540,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "6a335d63d34bd5a8",
@@ -3926,23 +4161,6 @@
         ]
     },
     {
-        "id": "75a4854936fa2ae3",
-        "type": "ui_text",
-        "z": "32101b1a30d365e2",
-        "group": "c2f0c7f8a9fe136e",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Typ",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1030,
-        "y": 500,
-        "wires": []
-    },
-    {
         "id": "cb7be853448ac0a3",
         "type": "change",
         "z": "32101b1a30d365e2",
@@ -4033,44 +4251,6 @@
                 "17c6664b9f4bb5a7",
                 "e2bccbbf37b6996d"
             ]
-        ]
-    },
-    {
-        "id": "17c6664b9f4bb5a7",
-        "type": "image viewer",
-        "z": "32101b1a30d365e2",
-        "name": "vorschau",
-        "width": "120",
-        "data": "payload",
-        "dataType": "msg",
-        "active": true,
-        "x": 920,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e2bccbbf37b6996d",
-        "type": "ui_media",
-        "z": "32101b1a30d365e2",
-        "group": "c2f0c7f8a9fe136e",
-        "name": "JetPhotoImage",
-        "width": 0,
-        "height": 0,
-        "order": 1,
-        "category": "platzhalter",
-        "file": "keinbild.jpg",
-        "layout": "center",
-        "showcontrols": false,
-        "loop": false,
-        "onstart": false,
-        "scope": "local",
-        "tooltip": "",
-        "x": 920,
-        "y": 80,
-        "wires": [
-            []
         ]
     },
     {
