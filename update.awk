@@ -7,7 +7,7 @@ BEGIN {
     if (match(lo,/node-red-[a-z-]+/)>0 )
     {
         split(lo,a,":");
-        cmd=sprintf("ls %-70s",a[1]);
+        cmd=sprintf("node-red admin install %-70s",a[1]);
         system(cmd)
     }
     else
