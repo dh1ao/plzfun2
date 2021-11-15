@@ -254,7 +254,7 @@
         "className": ""
     },
     {
-        "id": "ccf0d83d6efbbb8e",
+        "id": "b698cb64a80e92ac",
         "type": "ui_spacer",
         "z": "09a43f806fd59071",
         "name": "spacer",
@@ -264,7 +264,7 @@
         "height": 1
     },
     {
-        "id": "c06d92708160d4e4",
+        "id": "af18a3b0f764021b",
         "type": "ui_spacer",
         "z": "09a43f806fd59071",
         "name": "spacer",
@@ -274,7 +274,7 @@
         "height": 1
     },
     {
-        "id": "efeaf5605f51e240",
+        "id": "dff49f4f87bf90f8",
         "type": "ui_spacer",
         "z": "09a43f806fd59071",
         "name": "spacer",
@@ -284,7 +284,7 @@
         "height": 1
     },
     {
-        "id": "e8871d3fc2784877",
+        "id": "9087fa60c169e1ac",
         "type": "ui_spacer",
         "z": "09a43f806fd59071",
         "name": "spacer",
@@ -294,7 +294,7 @@
         "height": 1
     },
     {
-        "id": "f31f1c950228e2d2",
+        "id": "fbaa976c2abd6fee",
         "type": "ui_spacer",
         "z": "09a43f806fd59071",
         "name": "spacer",
@@ -304,17 +304,7 @@
         "height": 1
     },
     {
-        "id": "714ef71ae61d4b82",
-        "type": "ui_spacer",
-        "z": "09a43f806fd59071",
-        "name": "spacer",
-        "group": "b38b00e078ff3c09",
-        "order": 17,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "754c1b5d3fa9c832",
+        "id": "0d63bbd6e9270fea",
         "type": "ui_spacer",
         "z": "09a43f806fd59071",
         "name": "spacer",
@@ -3105,9 +3095,9 @@
         "z": "09a43f806fd59071",
         "group": "b38b00e078ff3c09",
         "name": "",
-        "width": 7,
+        "width": 1,
         "height": 1,
-        "order": 21,
+        "order": 17,
         "category": "",
         "file": "",
         "layout": "adjust",
@@ -4161,7 +4151,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html>\n<head>\n\n    <title>three.js in node-red</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n<style>\nbody {background-color: powderblue;}\n</style>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n<body>\n\t<canvas class=\"webgl\"></canvas>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js\"></script>\n<script src=\"https://unpkg.com/three@0.134.0/examples/js/loaders/OBJLoader.js\"></script>\n<script src=\"webgl.js\"></script>\n</body>\n\n",
+        "template": "<html>\n<head>\n\n    <title>three.js in node-red</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n<style>\nbody {background-color: powderblue;}\n</style>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n<body>\n\t<canvas class=\"webgl\"></canvas>\n\t\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js\"></script>\n<script src=\"https://unpkg.com/three@0.134.0/examples/js/loaders/OBJLoader.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js\"></script>\n\n<script src=\"webgl.js\"></script>\n</body>\n</html>\n\n",
         "output": "str",
         "x": 370,
         "y": 160,
