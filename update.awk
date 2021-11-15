@@ -1,4 +1,7 @@
 BEGIN {
+    print "use it like so...\n"
+    print "cat package.json|awk -f update.awk\n\n"
+    print "maybe you need a sudo apt-get install gawk"
 }
 
 {
