@@ -361,96 +361,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 580,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c2b2a3be8f49e2c0",
-        "type": "ui_chart",
-        "z": "2b499fb43b7c09b4",
-        "name": "",
-        "group": "ae559b234acc86eb",
-        "order": 8,
-        "width": "3",
-        "height": "3",
-        "label": "Netzwerch",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "bezier",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#fce94f",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 570,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "060bab8db67160ea",
-        "type": "ui_chart",
-        "z": "2b499fb43b7c09b4",
-        "name": "",
-        "group": "ae559b234acc86eb",
-        "order": 3,
-        "width": "3",
-        "height": "3",
-        "label": "Disk IO",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "cubic",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#73d216",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 590,
-        "y": 140,
+        "x": 660,
+        "y": 300,
         "wires": [
             []
         ]
@@ -474,14 +386,12 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payloadType": "date",
-        "x": 180,
+        "payloadType": "str",
+        "x": 160,
         "y": 120,
         "wires": [
             [
                 "a03d87b7ccb4402e",
-                "f4113e6e2264dee7",
-                "5e04c69320d2701e",
                 "041a15bcc4d0b1b4"
             ]
         ]
@@ -571,30 +481,6 @@
         ]
     },
     {
-        "id": "f4113e6e2264dee7",
-        "type": "Drives",
-        "z": "2b499fb43b7c09b4",
-        "name": "",
-        "x": 410,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5e04c69320d2701e",
-        "type": "NetworkIntf",
-        "z": "2b499fb43b7c09b4",
-        "name": "",
-        "x": 400,
-        "y": 200,
-        "wires": [
-            [
-                "c2b2a3be8f49e2c0"
-            ]
-        ]
-    },
-    {
         "id": "041a15bcc4d0b1b4",
         "type": "Memory",
         "z": "2b499fb43b7c09b4",
@@ -604,9 +490,26 @@
         "y": 300,
         "wires": [
             [
-                "090866092f482bb7"
+                "090866092f482bb7",
+                "3440fae160043848"
             ]
         ]
+    },
+    {
+        "id": "3440fae160043848",
+        "type": "debug",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 240,
+        "wires": []
     },
     {
         "id": "63e12ff9eaf62ef7",
@@ -1716,8 +1619,7 @@
         "wires": [
             [
                 "17e191c1f18ca3be",
-                "94060e4f6149555b",
-                "29c87cc8a678d859"
+                "94060e4f6149555b"
             ]
         ]
     },
@@ -1791,22 +1693,6 @@
                 "e0bc938ec782d4f8"
             ]
         ]
-    },
-    {
-        "id": "29c87cc8a678d859",
-        "type": "debug",
-        "z": "b7b534fbe43e027d",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "160a75a0cd84502c",

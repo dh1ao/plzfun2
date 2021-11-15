@@ -407,7 +407,7 @@
     },
     "node-red-dashboard": {
         "name": "node-red-dashboard",
-        "version": "3.0.4",
+        "version": "3.1.1",
         "local": true,
         "user": true,
         "nodes": {
@@ -642,8 +642,7 @@
                 "module": "node-red-dashboard",
                 "file": "/home/peter/.node-red/node_modules/node-red-dashboard/nodes/ui_spacer.js"
             }
-        },
-        "pending_version": "3.1.1"
+        }
     },
     "node-red-contrib-os": {
         "name": "node-red-contrib-os",
