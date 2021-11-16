@@ -4246,7 +4246,7 @@
         "width": 2,
         "height": 2,
         "gtype": "compass",
-        "title": "Bearing",
+        "title": "",
         "label": "°",
         "format": "{{value}}",
         "min": 0,
