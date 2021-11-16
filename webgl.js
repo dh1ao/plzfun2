@@ -136,7 +136,7 @@ const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 
 camera.position.x = 0;
 camera.position.y = -6;
 camera.position.z = 7;
-camera.rotation.x = 45;
+camera.rotation.x = 0;
 camera.rotation.y = 0;
 camera.rotation.z = 0;
 scene.add(camera);
@@ -152,6 +152,8 @@ cameraFolderRot.add(camera.rotation, 'z').min(-90).max(90).step(0.001);
 
 // Controls
 const controls = new OrbitControls(camera, canvas);
+controls.enablePan = false;
+controls.maxPolarAngle = Math.PI / 2;
 controls.enableDamping = true;
 
 /**
@@ -182,6 +184,7 @@ const tick = () => {
 
 	const elapsedTime = clock.getElapsedTime();
 
+	controls.update();
 	if (bhuddaObj) {
 		bhuddaObj.rotation.z = 0.75 * elapsedTime;
 	}
