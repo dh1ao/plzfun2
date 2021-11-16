@@ -314,6 +314,17 @@
         "height": 1
     },
     {
+        "id": "5d44660508d68b2b",
+        "type": "ui_group",
+        "name": "Details",
+        "tab": "aa65e6bafd4cc3c0",
+        "order": 2,
+        "disp": true,
+        "width": "7",
+        "collapse": true,
+        "className": ""
+    },
+    {
         "id": "090866092f482bb7",
         "type": "ui_chart",
         "z": "2b499fb43b7c09b4",
@@ -1525,7 +1536,7 @@
         "type": "function",
         "z": "b7b534fbe43e027d",
         "name": "human_readable",
-        "func": "var current_airline_icao = msg.payload.callsign ?msg.payload.callsign.substr(0,3):\"N/A\";\nvar origin_airport_iata = msg.payload.origin ? msg.payload.origin :\"unbekannt\";\nvar destination_airport_iata = msg.payload.destination ? msg.payload.destination :\"unbekannt\";\nvar registration = msg.payload.registration ? msg.payload.registration :\"N/A\";\nvar squawkCode = msg.payload.squawkCode ? msg.payload.squawkCode : \"N/A\";\nvar airlines = flow.get(\"airlines\");\nvar airports = flow.get(\"airports\");\nvar photo_url_base = \"https://www.jetphotos.com/registration/\"\nvar cache = global.get(\"flugzeuge\")\nmsg.payload.human={}\nmsg.payload.popup = \"<h3>Moment....</h3\"\n\nmsg.payload.name = registration\n\n// eigentlich überflüssig seid jetphotos\nairlines.forEach(function(al) {\n    if(al.abr==current_airline_icao) {\n        msg.payload.human[\"airline\"] = al.line\n        msg.payload.human[\"land\"] = al.country\n        if(al.country==\"Germany\") {\n            msg.payload.iconColor = \"#8dff33\"\n        }      \n    }\n});\n\n/*\nif (registration.substr(1, 2) == \"-H\" &&\n    registration.substr(0, 3) != \"F-H\" &&\n    registration.substr(0, 3) != \"G-H\")\n*/\nif ([\"D-H\"].includes(registration.substr(0, 3))||\n    [\"OE-X\",\"HB-X\",\"TC-H\"].includes(registration.substr(0, 4)))\n{\n    msg.payload.icon = \"helicopter\"\n    msg.payload.iconColor = \"#0000FF\"\n}\n\nif ([\"7000\"].includes(squawkCode) ||\n[\"D-B\", \"D-C\",\"D-E\",\"D-M\",\"D-I\",\"D-G\", \"D-F\", \"D-K\",\"D-L\",\"D-N\",\"D-O\"].includes(registration.substr(0, 3)) ||\n[\"4K-A\",\"9H-O\",\"9H-V\",\"CS-C\",\"CS-D\",\"CS-G\",\"CS-L\",\"CS-P\",\"D-AC\",\"EC-K\",\"ES-A\",\"HB-J\",\"I-AD\",\"LN-A\",\"LZ-B\",\n\"M-CH\",\"M-OV\",\"M-SE\",\n\"OE-F\",\"OK-U\",\"OP-D\",\"OY-C\",\"OK-P\",\"OY-N\",\"PH-D\",\"PH-E\",\"PH-N\",\"PH-V\",\"PH-Z\",\"PP-L\",\"PS-A\",\"RA-6\",\n\"S5-C\",\"SU-M\",\"T7-D\",\"YU-B\",\"YU-P\",\"YU-R\",\"YU-S\",\"YU-T\",\n\"ZS-C\",\"ZS-Y\"\n].includes(registration.substr(0, 4))) {\n    msg.payload.iconColor = \"#66FFFF\"\n    if (msg.payload.icon != \"helicopter\")\n        msg.payload.icon = \"smallplane\"\n}\n\nif ([\"0020\", \"0023\", \"0024\", \"0025\", \"0027\", \"0030\", \"0034\", \"0036\", \"0037\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0066\"\n}\n\nif ([\"7500\", \"7600\", \"7700\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0000\"\n    node.log(\"NOTFALL !!!\");\n}\nmsg.payload.human[\"gestarted in\"] = \"N/A\"\nmsg.payload.human[\"Ziel\"] = \"N/A\"\n\nairports.forEach(function(ap) {\n  if(ap.abr==origin_airport_iata) {\n      msg.payload.human[\"gestarted in\"] = ap.name+\" \"+ap.country\n  }\n  if(ap.abr==destination_airport_iata) {\n      msg.payload.human[\"Ziel\"] = ap.name+\" \"+ap.country\n  }\n});\n\ncache.push(msg.payload)\nglobal.set(\"flugzeuge\", cache)\n\n// und ab in den globalen context\nreturn msg;",
+        "func": "var current_airline_icao = msg.payload.callsign ?msg.payload.callsign.substr(0,3):\"N/A\";\nvar origin_airport_iata = msg.payload.origin ? msg.payload.origin :\"unbekannt\";\nvar destination_airport_iata = msg.payload.destination ? msg.payload.destination :\"unbekannt\";\nvar registration = msg.payload.registration ? msg.payload.registration :\"N/A\";\nvar squawkCode = msg.payload.squawkCode ? msg.payload.squawkCode : \"N/A\";\nvar airlines = flow.get(\"airlines\");\nvar airports = flow.get(\"airports\");\nvar photo_url_base = \"https://www.jetphotos.com/registration/\"\nvar cache = global.get(\"flugzeuge\")\nmsg.payload.human={}\nmsg.payload.popup = \"<h3>Moment....</h3\"\n\nmsg.payload.name = registration\n\n// eigentlich überflüssig seid jetphotos\nairlines.forEach(function(al) {\n    if(al.abr==current_airline_icao) {\n        msg.payload.human[\"airline\"] = al.line\n        msg.payload.human[\"land\"] = al.country\n        if(al.country==\"Germany\") {\n            msg.payload.iconColor = \"#8dff33\"\n        }      \n    }\n});\n\n/*\nif (registration.substr(1, 2) == \"-H\" &&\n    registration.substr(0, 3) != \"F-H\" &&\n    registration.substr(0, 3) != \"G-H\")\n*/\nif ([\"D-H\"].includes(registration.substr(0, 3))||\n    [\"OE-X\",\"HB-X\",\"TC-H\"].includes(registration.substr(0, 4)))\n{\n    msg.payload.icon = \"helicopter\"\n    msg.payload.iconColor = \"#0000FF\"\n}\n\nif ([\"7000\"].includes(squawkCode) ||\n[\"D-B\", \"D-C\",\"D-E\",\"D-M\",\"D-I\",\"D-G\", \"D-F\", \"D-K\",\"D-L\",\"D-N\",\"D-O\"].includes(registration.substr(0, 3)) ||\n[\"2-JE\",\"4K-A\",\"9H-O\",\"9H-V\",\"CS-C\",\"CS-D\",\"CS-G\",\"CS-L\",\"CS-P\",\"D-AC\",\"EC-K\",\"ES-A\",\"HB-J\",\"I-AD\",\"LN-A\",\"LZ-B\",\n\"M-CH\",\"M-OV\",\"M-SE\",\n\"OE-F\",\"OK-U\",\"OP-D\",\"OY-C\",\"OK-P\",\"OY-N\",\"PH-D\",\"PH-E\",\"PH-N\",\"PH-V\",\"PH-Z\",\"PP-L\",\"PS-A\",\"RA-6\",\n\"S5-C\",\"SU-M\",\"T7-D\",\"YU-B\",\"YU-P\",\"YU-R\",\"YU-S\",\"YU-T\",\n\"ZS-C\",\"ZS-Y\"\n].includes(registration.substr(0, 4))) {\n    msg.payload.iconColor = \"#66FFFF\"\n    if (msg.payload.icon != \"helicopter\")\n        msg.payload.icon = \"smallplane\"\n}\n\nif ([\"0020\", \"0023\", \"0024\", \"0025\", \"0027\", \"0030\", \"0033\", \"0034\", \"0036\", \"0037\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0066\"\n}\n\nif ([\"7500\", \"7600\", \"7700\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0000\"\n    node.log(\"NOTFALL !!!\");\n}\nmsg.payload.human[\"gestarted in\"] = \"N/A\"\nmsg.payload.human[\"Ziel\"] = \"N/A\"\n\nairports.forEach(function(ap) {\n  if(ap.abr==origin_airport_iata) {\n      msg.payload.human[\"gestarted in\"] = ap.name+\" \"+ap.country\n  }\n  if(ap.abr==destination_airport_iata) {\n      msg.payload.human[\"Ziel\"] = ap.name+\" \"+ap.country\n  }\n});\n\ncache.push(msg.payload)\nglobal.set(\"flugzeuge\", cache)\n\n// und ab in den globalen context\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3136,7 +3147,13 @@
                 "b208da8087832d56",
                 "de1ff0ce0d582c52",
                 "9393ca7ceb72e33f",
-                "992e37d47ec43944"
+                "992e37d47ec43944",
+                "3d2dec12835dfdc8",
+                "eedc790ba9e64cc3",
+                "2a14e0eb0c858960",
+                "5023e6781f085c5e",
+                "95736aca12315453",
+                "2b5aa7a9a07de8fd"
             ]
         ]
     },
@@ -4150,6 +4167,253 @@
         ]
     },
     {
+        "id": "3d2dec12835dfdc8",
+        "type": "debug",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "6144d03a93fe1090",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Callsign",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "eedc790ba9e64cc3",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "callsign_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.registration",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 640,
+        "wires": [
+            [
+                "6144d03a93fe1090"
+            ]
+        ]
+    },
+    {
+        "id": "2a14e0eb0c858960",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "bearing_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.bearing",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 680,
+        "wires": [
+            [
+                "fe5acc9525ed4923"
+            ]
+        ]
+    },
+    {
+        "id": "fe5acc9525ed4923",
+        "type": "ui_gauge",
+        "z": "32101b1a30d365e2",
+        "d": true,
+        "name": "",
+        "group": "5d44660508d68b2b",
+        "order": 8,
+        "width": 2,
+        "height": 2,
+        "gtype": "compass",
+        "title": "Bearing",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1020,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "486ccc2ea4a8e7fb",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Altitude",
+        "format": "{{msg.payload}} km",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "5023e6781f085c5e",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "altitude_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(payload.altitude*0.0003048,2)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 720,
+        "wires": [
+            [
+                "486ccc2ea4a8e7fb"
+            ]
+        ]
+    },
+    {
+        "id": "362f16a530563da8",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Geschwindigkeit",
+        "format": "{{msg.payload}} km/h",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "95736aca12315453",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "speed_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(payload.speed*1.852,0)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 760,
+        "wires": [
+            [
+                "362f16a530563da8"
+            ]
+        ]
+    },
+    {
+        "id": "c8e22de135eb3c12",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Steigrate",
+        "format": "{{msg.payload}} m/s",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "2b5aa7a9a07de8fd",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "climbrate_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(payload.rateOfClimb*0.00508,0)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 800,
+        "wires": [
+            [
+                "c8e22de135eb3c12"
+            ]
+        ]
+    },
+    {
         "id": "82bc22cb.914be",
         "type": "http in",
         "z": "825cb57ac6686b96",
@@ -4186,7 +4450,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html>\n<head>\n\n    <title>three.js in node-red</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n<style>\nbody {background-color: powderblue;}\n</style>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n<body>\n\t<canvas class=\"webgl\"></canvas>\n\t\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js\"></script>\n<script src=\"https://unpkg.com/three@0.134.0/examples/js/loaders/OBJLoader.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js\"></script>\n\n<script src=\"webgl.js\"></script>\n</body>\n</html>\n\n",
+        "template": "<html>\n<head>\n\n    <title>three.js in node-red</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n<style>\nbody {background-color: powderblue;}\n</style>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n<body>\n\t<canvas class=\"webgl\"></canvas>\n\t\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js\"></script>\n<script src=\"https://unpkg.com/three@0.134.0/examples/js/loaders/OBJLoader.js\"></script>\n\n<script type=\"module\" src=\"webgl.js\"></script>\n</body>\n</html>\n\n",
         "output": "str",
         "x": 370,
         "y": 160,

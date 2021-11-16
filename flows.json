@@ -314,6 +314,17 @@
         "height": 1
     },
     {
+        "id": "5d44660508d68b2b",
+        "type": "ui_group",
+        "name": "Details",
+        "tab": "aa65e6bafd4cc3c0",
+        "order": 2,
+        "disp": true,
+        "width": "7",
+        "collapse": true,
+        "className": ""
+    },
+    {
         "id": "090866092f482bb7",
         "type": "ui_chart",
         "z": "2b499fb43b7c09b4",
@@ -3136,7 +3147,12 @@
                 "b208da8087832d56",
                 "de1ff0ce0d582c52",
                 "9393ca7ceb72e33f",
-                "992e37d47ec43944"
+                "992e37d47ec43944",
+                "eedc790ba9e64cc3",
+                "2a14e0eb0c858960",
+                "5023e6781f085c5e",
+                "95736aca12315453",
+                "2b5aa7a9a07de8fd"
             ]
         ]
     },
@@ -4146,6 +4162,237 @@
         "wires": [
             [
                 "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "6144d03a93fe1090",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Callsign",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "eedc790ba9e64cc3",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "callsign_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.registration",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 640,
+        "wires": [
+            [
+                "6144d03a93fe1090"
+            ]
+        ]
+    },
+    {
+        "id": "2a14e0eb0c858960",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "bearing_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.bearing",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 680,
+        "wires": [
+            [
+                "fe5acc9525ed4923"
+            ]
+        ]
+    },
+    {
+        "id": "fe5acc9525ed4923",
+        "type": "ui_gauge",
+        "z": "32101b1a30d365e2",
+        "d": true,
+        "name": "",
+        "group": "5d44660508d68b2b",
+        "order": 8,
+        "width": 2,
+        "height": 2,
+        "gtype": "compass",
+        "title": "Bearing",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1020,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "486ccc2ea4a8e7fb",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Altitude",
+        "format": "{{msg.payload}} km",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "5023e6781f085c5e",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "altitude_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(payload.altitude*0.0003048,2)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 720,
+        "wires": [
+            [
+                "486ccc2ea4a8e7fb"
+            ]
+        ]
+    },
+    {
+        "id": "362f16a530563da8",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Geschwindigkeit",
+        "format": "{{msg.payload}} km/h",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1040,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "95736aca12315453",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "speed_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(payload.speed*1.852,0)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 760,
+        "wires": [
+            [
+                "362f16a530563da8"
+            ]
+        ]
+    },
+    {
+        "id": "c8e22de135eb3c12",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Steigrate",
+        "format": "{{msg.payload}} m/s",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "2b5aa7a9a07de8fd",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "climbrate_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(payload.rateOfClimb*0.00508,0)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 800,
+        "wires": [
+            [
+                "c8e22de135eb3c12"
             ]
         ]
     },
