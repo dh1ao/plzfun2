@@ -3940,7 +3940,7 @@
         "type": "function",
         "z": "32101b1a30d365e2",
         "name": "cleanUpHuman",
-        "func": "msg.payload.human.airline = msg.payload.human.airline ||\"N/A\"\nmsg.payload.human.airline = msg.payload.human.airline || \"N/A\"\nmsg.payload.human.Ziel = msg.payload.human.Ziel || \"N/A\"\nmsg.payload.human[\"gestarted in\"] = msg.payload.human[\"gestarted in\"] || \"N/A\"\n\nreturn msg;",
+        "func": "msg.payload.human.airline = msg.payload.human.airline ||\"N/A\"\nmsg.payload.human.airline = msg.payload.human.airline || \"N/A\"\nmsg.payload.human.Ziel = msg.payload.human.Ziel || \"N/A\"\nmsg.payload.human[\"gestarted in\"] = msg.payload.human[\"gestarted in\"] || \"N/A\"\nmsg.payload.altitude = msg.payload.altitude || \"N/A\"\nmsg.payload.rateOfClimb = msg.payload.rateOfClimb || \"N/A\"\nmsg.payload.bearing = msg.payload.bearing || \"0\"\nmsg.payload.speed = msg.payload.speed || \"N/A\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
