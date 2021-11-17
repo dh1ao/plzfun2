@@ -245,12 +245,12 @@
     {
         "id": "c2f0c7f8a9fe136e",
         "type": "ui_group",
-        "name": "PlaneInfo",
+        "name": "Info",
         "tab": "aa65e6bafd4cc3c0",
         "order": 1,
-        "disp": false,
+        "disp": true,
         "width": "6",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -3659,6 +3659,11 @@
             },
             {
                 "t": "eq",
+                "v": "4441",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "4447",
                 "vt": "str"
             },
@@ -3693,7 +3698,7 @@
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 19,
+        "outputs": 20,
         "x": 110,
         "y": 520,
         "wires": [
@@ -3732,6 +3737,9 @@
             ],
             [
                 "21e4e0f2fb1e400e"
+            ],
+            [
+                "af89c5b80ce2acb9"
             ],
             [
                 "7fd80b4f610b58bc"
@@ -3884,7 +3892,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 1180,
+        "y": 1220,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -4560,7 +4568,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 1060,
+        "y": 1100,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -4587,7 +4595,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 980,
+        "y": 1060,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -4614,7 +4622,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -4641,7 +4649,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 1140,
+        "y": 1180,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -4669,6 +4677,33 @@
         "reg": false,
         "x": 330,
         "y": 1020,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "af89c5b80ce2acb9",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "4441",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ATZ Egelsbach",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 980,
         "wires": [
             [
                 "808e272d36d5bdde"
