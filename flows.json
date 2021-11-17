@@ -1536,7 +1536,7 @@
         "type": "function",
         "z": "b7b534fbe43e027d",
         "name": "human_readable",
-        "func": "var current_airline_icao = msg.payload.callsign ?msg.payload.callsign.substr(0,3):\"N/A\";\nvar origin_airport_iata = msg.payload.origin ? msg.payload.origin :\"unbekannt\";\nvar destination_airport_iata = msg.payload.destination ? msg.payload.destination :\"unbekannt\";\nvar registration = msg.payload.registration ? msg.payload.registration :\"N/A\";\nvar squawkCode = msg.payload.squawkCode ? msg.payload.squawkCode : \"N/A\";\nvar airlines = flow.get(\"airlines\");\nvar airports = flow.get(\"airports\");\nvar photo_url_base = \"https://www.jetphotos.com/registration/\"\nvar cache = global.get(\"flugzeuge\")\nmsg.payload.human={}\nmsg.payload.popup = \"<h3>Moment....</h3\"\n\nmsg.payload.name = registration\n\n// eigentlich überflüssig seid jetphotos\nairlines.forEach(function(al) {\n    if(al.abr==current_airline_icao) {\n        msg.payload.human[\"airline\"] = al.line\n        msg.payload.human[\"land\"] = al.country\n        if(al.country==\"Germany\") {\n            msg.payload.iconColor = \"#8dff33\"\n        }      \n    }\n});\n\n/*\nif (registration.substr(1, 2) == \"-H\" &&\n    registration.substr(0, 3) != \"F-H\" &&\n    registration.substr(0, 3) != \"G-H\")\n*/\nif ([\"D-H\"].includes(registration.substr(0, 3))||\n    [\"OE-X\",\"OY-H\",\"HB-X\",\"TC-H\"].includes(registration.substr(0, 4)))\n{\n    msg.payload.icon = \"helicopter\"\n    msg.payload.iconColor = \"#0000FF\"\n}\n\nif ([\"7000\"].includes(squawkCode) ||\n[\"D-B\", \"D-C\",\"D-E\",\"D-M\",\"D-I\",\"D-G\", \"D-F\", \"D-K\",\"D-L\",\"D-N\",\"D-O\"].includes(registration.substr(0, 3)) ||\n[\"2-JE\",\"4K-A\",\"9H-O\",\"CS-C\",\"CS-D\",\"CS-G\",\"CS-L\",\"CS-P\",\"D-AC\",\"EC-K\",\"ES-A\",\"I-AD\",\"LN-A\",\"LZ-B\",\n\"M-CH\",\"M-OV\",\"M-SE\",\n\"OE-F\",\"OK-U\",\"OP-D\",\"OY-C\",\"OY-H\",\"OK-P\",\"OY-N\",\"PH-D\",\"PH-E\",\"PH-N\",\"PH-V\",\"PH-Z\",\"PP-L\",\"PS-A\",\"RA-6\",\n\"S5-C\",\"SU-M\",\"T7-D\",\"YU-B\",\"YU-P\",\"YU-R\",\"YU-S\",\"YU-T\",\n\"ZS-C\",\"ZS-Y\"\n].includes(registration.substr(0, 4))) {\n    msg.payload.iconColor = \"#66FFFF\"\n    if (msg.payload.icon != \"helicopter\")\n        msg.payload.icon = \"smallplane\"\n}\n\nif ([\"0020\", \"0023\", \"0024\", \"0025\", \"0027\", \"0030\", \"0033\", \"0034\", \"0036\", \"0037\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0066\"\n}\n\nif ([\"7500\", \"7600\", \"7700\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0000\"\n    node.log(\"NOTFALL !!!\");\n}\nmsg.payload.human[\"gestarted in\"] = \"N/A\"\nmsg.payload.human[\"Ziel\"] = \"N/A\"\n\nairports.forEach(function(ap) {\n  if(ap.abr==origin_airport_iata) {\n      msg.payload.human[\"gestarted in\"] = ap.name+\" \"+ap.country\n  }\n  if(ap.abr==destination_airport_iata) {\n      msg.payload.human[\"Ziel\"] = ap.name+\" \"+ap.country\n  }\n});\n\ncache.push(msg.payload)\nglobal.set(\"flugzeuge\", cache)\n\n// und ab in den globalen context\nreturn msg;",
+        "func": "var current_airline_icao = msg.payload.callsign ?msg.payload.callsign.substr(0,3):\"N/A\";\nvar origin_airport_iata = msg.payload.origin ? msg.payload.origin :\"unbekannt\";\nvar destination_airport_iata = msg.payload.destination ? msg.payload.destination :\"unbekannt\";\nvar registration = msg.payload.registration ? msg.payload.registration :\"N/A\";\nvar squawkCode = msg.payload.squawkCode ? msg.payload.squawkCode : \"N/A\";\nvar airlines = flow.get(\"airlines\");\nvar airports = flow.get(\"airports\");\nvar photo_url_base = \"https://www.jetphotos.com/registration/\"\nvar cache = global.get(\"flugzeuge\")\nmsg.payload.human={}\nmsg.payload.popup = \"<h3>Moment....</h3\"\n\nmsg.payload.name = registration\n\n// eigentlich überflüssig seid jetphotos\nairlines.forEach(function(al) {\n    if(al.abr==current_airline_icao) {\n        msg.payload.human[\"airline\"] = al.line\n        msg.payload.human[\"land\"] = al.country\n        if(al.country==\"Germany\") {\n            msg.payload.iconColor = \"#8dff33\"\n        }      \n    }\n});\n\n/*\nif (registration.substr(1, 2) == \"-H\" &&\n    registration.substr(0, 3) != \"F-H\" &&\n    registration.substr(0, 3) != \"G-H\")\n*/\nif ([\"D-H\"].includes(registration.substr(0, 3))||\n    [\"OE-X\",\"OY-H\",\"HB-X\",\"TC-H\"].includes(registration.substr(0, 4)))\n{\n    msg.payload.icon = \"helicopter\"\n    msg.payload.iconColor = \"#0000FF\"\n}\n\nif ([\"7000\"].includes(squawkCode) ||\n[\"D-B\", \"D-C\",\"D-E\",\"D-M\",\"D-I\",\"D-G\", \"D-F\", \"D-K\",\"D-L\",\"D-N\",\"D-O\"].includes(registration.substr(0, 3)) ||\n[\"2-JE\",\"4K-A\",\"5N-K\",\"9H-O\",\"CS-C\",\"CS-D\",\"CS-G\",\"CS-L\",\"CS-P\",\"D-AC\",\"EC-I\",\"EC-K\",\"ES-A\",\"F-HF\",\"I-AD\",\"LN-A\",\"LZ-B\",\n\"M-CH\",\"M-OV\",\"M-SE\",\n\"OE-F\",\"OK-U\",\"OP-D\",\"OY-C\",\"OY-H\",\"OK-P\",\"OY-N\",\"PH-D\",\"PH-E\",\"PH-N\",\"PH-V\",\"PH-Z\",\"PP-L\",\"PS-A\",\"RA-6\",\n\"S5-C\",\"SP-A\",\"SU-M\",\"T7-D\",\"VQ-B\",\"YU-B\",\"YU-P\",\"YU-R\",\"YU-S\",\"YU-T\",\n\"ZS-C\",\"ZS-Y\"\n].includes(registration.substr(0, 4))) {\n    msg.payload.iconColor = \"#66FFFF\"\n    if (msg.payload.icon != \"helicopter\")\n        msg.payload.icon = \"smallplane\"\n}\n\nif ([\"0020\", \"0023\", \"0024\", \"0025\", \"0027\", \"0030\", \"0033\", \"0034\", \"0036\", \"0037\",\n\"2000\",\"4450\",\"4643\",\"4447\",\"4441\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0066\"\n}\n\nif ([\"7500\", \"7600\", \"7700\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0000\"\n    node.log(\"NOTFALL !!!\");\n}\nmsg.payload.human[\"gestarted in\"] = \"N/A\"\nmsg.payload.human[\"Ziel\"] = \"N/A\"\n\nairports.forEach(function(ap) {\n  if(ap.abr==origin_airport_iata) {\n      msg.payload.human[\"gestarted in\"] = ap.name+\" \"+ap.country\n  }\n  if(ap.abr==destination_airport_iata) {\n      msg.payload.human[\"Ziel\"] = ap.name+\" \"+ap.country\n  }\n});\n\ncache.push(msg.payload)\nglobal.set(\"flugzeuge\", cache)\n\n// und ab in den globalen context\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3644,6 +3644,11 @@
             },
             {
                 "t": "eq",
+                "v": "0037",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "2000",
                 "vt": "str"
             },
@@ -3663,7 +3668,7 @@
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 13,
+        "outputs": 14,
         "x": 110,
         "y": 520,
         "wires": [
@@ -3693,6 +3698,9 @@
             ],
             [
                 "4af52f12c72aa479"
+            ],
+            [
+                "3eea4299c6d688cc"
             ],
             [
                 "21e4e0f2fb1e400e"
@@ -3809,7 +3817,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 860,
+        "y": 900,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3836,7 +3844,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 940,
+        "y": 980,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3917,7 +3925,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 900,
+        "y": 940,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -4248,8 +4256,7 @@
         "y": 680,
         "wires": [
             [
-                "fe5acc9525ed4923",
-                "f9af712ef4cc9637"
+                "fe5acc9525ed4923"
             ]
         ]
     },
@@ -4413,22 +4420,6 @@
         ]
     },
     {
-        "id": "f9af712ef4cc9637",
-        "type": "debug",
-        "z": "32101b1a30d365e2",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 900,
-        "wires": []
-    },
-    {
         "id": "48662d3d274ae9ff",
         "type": "change",
         "z": "32101b1a30d365e2",
@@ -4476,6 +4467,33 @@
         "reg": false,
         "x": 330,
         "y": 740,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "3eea4299c6d688cc",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0037",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Polizei mit Restlichtverstärker",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 860,
         "wires": [
             [
                 "808e272d36d5bdde"
