@@ -3341,7 +3341,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1030,
-        "y": 460,
+        "y": 540,
         "wires": []
     },
     {
@@ -3364,7 +3364,7 @@
         "to": "",
         "reg": false,
         "x": 830,
-        "y": 460,
+        "y": 540,
         "wires": [
             [
                 "22f19a9cb0f2a0f1"
@@ -3391,7 +3391,7 @@
         "to": "",
         "reg": false,
         "x": 830,
-        "y": 540,
+        "y": 620,
         "wires": [
             [
                 "27db909b876bbe3b"
@@ -3418,7 +3418,7 @@
         "to": "",
         "reg": false,
         "x": 870,
-        "y": 580,
+        "y": 660,
         "wires": [
             [
                 "4726607b9953d5a2"
@@ -3439,7 +3439,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1030,
-        "y": 580,
+        "y": 660,
         "wires": []
     },
     {
@@ -3456,7 +3456,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1030,
-        "y": 540,
+        "y": 620,
         "wires": []
     },
     {
@@ -4052,8 +4052,8 @@
         "y": 420,
         "wires": [
             [
-                "93a633f332ddc9c9",
-                "cb7be853448ac0a3"
+                "27140a84e9fee0e3",
+                "b9abd1afa7c285a6"
             ]
         ]
     },
@@ -4071,7 +4071,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1030,
-        "y": 500,
+        "y": 580,
         "wires": []
     },
     {
@@ -4094,7 +4094,7 @@
         "to": "",
         "reg": false,
         "x": 820,
-        "y": 500,
+        "y": 580,
         "wires": [
             [
                 "75a4854936fa2ae3"
@@ -4262,7 +4262,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1020,
-        "y": 640,
+        "y": 720,
         "wires": []
     },
     {
@@ -4285,7 +4285,7 @@
         "to": "",
         "reg": false,
         "x": 840,
-        "y": 640,
+        "y": 720,
         "wires": [
             [
                 "6144d03a93fe1090"
@@ -4312,7 +4312,7 @@
         "to": "",
         "reg": false,
         "x": 840,
-        "y": 680,
+        "y": 760,
         "wires": [
             [
                 "fe5acc9525ed4923"
@@ -4343,7 +4343,7 @@
         "seg2": "",
         "className": "",
         "x": 1020,
-        "y": 680,
+        "y": 760,
         "wires": []
     },
     {
@@ -4360,7 +4360,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1010,
-        "y": 720,
+        "y": 800,
         "wires": []
     },
     {
@@ -4383,7 +4383,7 @@
         "to": "",
         "reg": false,
         "x": 840,
-        "y": 720,
+        "y": 800,
         "wires": [
             [
                 "486ccc2ea4a8e7fb"
@@ -4404,7 +4404,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1020,
-        "y": 760,
+        "y": 840,
         "wires": []
     },
     {
@@ -4427,7 +4427,7 @@
         "to": "",
         "reg": false,
         "x": 830,
-        "y": 760,
+        "y": 840,
         "wires": [
             [
                 "362f16a530563da8"
@@ -4448,7 +4448,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1020,
-        "y": 800,
+        "y": 880,
         "wires": []
     },
     {
@@ -4471,7 +4471,7 @@
         "to": "",
         "reg": false,
         "x": 840,
-        "y": 800,
+        "y": 880,
         "wires": [
             [
                 "c8e22de135eb3c12"
@@ -4720,6 +4720,43 @@
                 "808e272d36d5bdde"
             ]
         ]
+    },
+    {
+        "id": "27140a84e9fee0e3",
+        "type": "debug",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b9abd1afa7c285a6",
+        "type": "function",
+        "z": "32101b1a30d365e2",
+        "name": "N/A Lin_Type",
+        "func": "msg.payload[4]=msg.payload[4]||\"N/A\"\nmsg.payload[1]=msg.payload[1]||\"N/A\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 480,
+        "wires": [
+            [
+                "cb7be853448ac0a3",
+                "93a633f332ddc9c9"
+            ]
+        ],
+        "info": "airline und planetype ggfs. mit N/A versehen"
     },
     {
         "id": "82bc22cb.914be",
