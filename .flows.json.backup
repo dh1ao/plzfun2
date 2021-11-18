@@ -245,12 +245,12 @@
     {
         "id": "c2f0c7f8a9fe136e",
         "type": "ui_group",
-        "name": "PlaneInfo",
+        "name": "Info",
         "tab": "aa65e6bafd4cc3c0",
-        "order": 1,
-        "disp": false,
+        "order": 2,
+        "disp": true,
         "width": "6",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -312,6 +312,28 @@
         "order": 20,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "5d44660508d68b2b",
+        "type": "ui_group",
+        "name": "Details",
+        "tab": "aa65e6bafd4cc3c0",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "2cf1611be1ceb07e",
+        "type": "ui_group",
+        "name": "Bild",
+        "tab": "aa65e6bafd4cc3c0",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "090866092f482bb7",
@@ -1525,7 +1547,7 @@
         "type": "function",
         "z": "b7b534fbe43e027d",
         "name": "human_readable",
-        "func": "var current_airline_icao = msg.payload.callsign ?msg.payload.callsign.substr(0,3):\"N/A\";\nvar origin_airport_iata = msg.payload.origin ? msg.payload.origin :\"unbekannt\";\nvar destination_airport_iata = msg.payload.destination ? msg.payload.destination :\"unbekannt\";\nvar registration = msg.payload.registration ? msg.payload.registration :\"N/A\";\nvar squawkCode = msg.payload.squawkCode ? msg.payload.squawkCode : \"N/A\";\nvar airlines = flow.get(\"airlines\");\nvar airports = flow.get(\"airports\");\nvar photo_url_base = \"https://www.jetphotos.com/registration/\"\nvar cache = global.get(\"flugzeuge\")\nmsg.payload.human={}\nmsg.payload.popup = \"<h3>Moment....</h3\"\n\nmsg.payload.name = registration\n\n// eigentlich überflüssig seid jetphotos\nairlines.forEach(function(al) {\n    if(al.abr==current_airline_icao) {\n        msg.payload.human[\"airline\"] = al.line\n        msg.payload.human[\"land\"] = al.country\n        if(al.country==\"Germany\") {\n            msg.payload.iconColor = \"#8dff33\"\n        }      \n    }\n});\n\n/*\nif (registration.substr(1, 2) == \"-H\" &&\n    registration.substr(0, 3) != \"F-H\" &&\n    registration.substr(0, 3) != \"G-H\")\n*/\nif ([\"D-H\"].includes(registration.substr(0, 3))||\n    [\"OE-X\",\"HB-X\",\"TC-H\"].includes(registration.substr(0, 4)))\n{\n    msg.payload.icon = \"helicopter\"\n    msg.payload.iconColor = \"#0000FF\"\n}\n\nif ([\"7000\"].includes(squawkCode) ||\n[\"D-B\", \"D-C\",\"D-E\",\"D-M\",\"D-I\",\"D-G\", \"D-F\", \"D-K\",\"D-L\",\"D-N\",\"D-O\"].includes(registration.substr(0, 3)) ||\n[\"4K-A\",\"9H-O\",\"9H-V\",\"CS-C\",\"CS-D\",\"CS-G\",\"CS-L\",\"CS-P\",\"D-AC\",\"EC-K\",\"ES-A\",\"HB-J\",\"I-AD\",\"LN-A\",\"LZ-B\",\n\"M-CH\",\"M-OV\",\"M-SE\",\n\"OE-F\",\"OK-U\",\"OP-D\",\"OY-C\",\"OK-P\",\"OY-N\",\"PH-D\",\"PH-E\",\"PH-N\",\"PH-V\",\"PH-Z\",\"PP-L\",\"PS-A\",\"RA-6\",\n\"S5-C\",\"SU-M\",\"T7-D\",\"YU-B\",\"YU-P\",\"YU-R\",\"YU-S\",\"YU-T\",\n\"ZS-C\",\"ZS-Y\"\n].includes(registration.substr(0, 4))) {\n    msg.payload.iconColor = \"#66FFFF\"\n    if (msg.payload.icon != \"helicopter\")\n        msg.payload.icon = \"smallplane\"\n}\n\nif ([\"0020\", \"0023\", \"0024\", \"0025\", \"0027\", \"0030\", \"0034\", \"0036\", \"0037\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0066\"\n}\n\nif ([\"7500\", \"7600\", \"7700\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0000\"\n    node.log(\"NOTFALL !!!\");\n}\nmsg.payload.human[\"gestarted in\"] = \"N/A\"\nmsg.payload.human[\"Ziel\"] = \"N/A\"\n\nairports.forEach(function(ap) {\n  if(ap.abr==origin_airport_iata) {\n      msg.payload.human[\"gestarted in\"] = ap.name+\" \"+ap.country\n  }\n  if(ap.abr==destination_airport_iata) {\n      msg.payload.human[\"Ziel\"] = ap.name+\" \"+ap.country\n  }\n});\n\ncache.push(msg.payload)\nglobal.set(\"flugzeuge\", cache)\n\n// und ab in den globalen context\nreturn msg;",
+        "func": "var current_airline_icao = msg.payload.callsign ?msg.payload.callsign.substr(0,3):\"N/A\";\nvar origin_airport_iata = msg.payload.origin ? msg.payload.origin :\"unbekannt\";\nvar destination_airport_iata = msg.payload.destination ? msg.payload.destination :\"unbekannt\";\nvar registration = msg.payload.registration ? msg.payload.registration :\"N/A\";\nvar squawkCode = msg.payload.squawkCode ? msg.payload.squawkCode : \"N/A\";\nvar airlines = flow.get(\"airlines\");\nvar airports = flow.get(\"airports\");\nvar photo_url_base = \"https://www.jetphotos.com/registration/\"\nvar cache = global.get(\"flugzeuge\")\nmsg.payload.human={}\nmsg.payload.popup = \"<h3>Moment....</h3\"\n\nmsg.payload.name = registration\n\n// eigentlich überflüssig seid jetphotos\nairlines.forEach(function(al) {\n    if(al.abr==current_airline_icao) {\n        msg.payload.human[\"airline\"] = al.line\n        msg.payload.human[\"land\"] = al.country\n        if(al.country==\"Germany\") {\n            msg.payload.iconColor = \"#8dff33\"\n        }      \n    }\n});\n\n/*\nif (registration.substr(1, 2) == \"-H\" &&\n    registration.substr(0, 3) != \"F-H\" &&\n    registration.substr(0, 3) != \"G-H\")\n*/\nif ([\"D-H\"].includes(registration.substr(0, 3))||\n    [\"9A-H\",\"LX-H\",\"CS-H\",\"OE-X\",\"OY-H\",\"HB-X\",\"HB-Z\",\"LN-O\",\n    \"S5-H\",\"SE-H\",\"SE-J\",\"SX-H\",\"TC-H\",\"Z3-H\"].includes(registration.substr(0, 4)))\n{\n    msg.payload.icon = \"helicopter\"\n    msg.payload.iconColor = \"#0000FF\"\n}\n\nif ([\"7000\"].includes(squawkCode) ||\n[\"C-I\",\n\"D-B\", \"D-C\",\"D-E\",\"D-F\",\"D-G\",\"D-I\",\"D-K\",\"D-L\",\"D-M\",\"D-N\",\"D-O\",\n\"D-0\",\"D-1\",\"D-2\",\"D-3\",\"D-4\",\"D-5\",\"D-6\",\"D-7\",\"D-8\",\"D-9\",\n\"EC-Y\",\"EC-Z\",\n\"F-C\",\"F-D\",\"F-J\",\"F-P\",\n\"G-F\",\"G-M\"].includes(registration.substr(0, 3)) ||\n[\"2-JE\",\"4K-A\",\"5N-K\",\"9A-G\",\"9A-O\",\"9A-U\",\n\"9H-O\",\n\"CS-B\",\"CS-C\",\"CS-D\",\"CS-G\",\"CS-L\",\"CS-P\",\"CS-U\",\"CS-X\",\n\"D-AC\",\n\"EC-I\",\"EC-K\",\"ES-A\",\"F-HF\",\n\"HA-1\",\"HA-2\",\"HA-3\",\"HA-4\",\"HA-5\",\"HA-6\",\"HA-7\",\"HA-8\",\"HA-9\",\n\"HB-1\",\"HB-2\",\"HB-3\",\"HB-4\",\"HB-5\",\"HB-6\",\"HB-7\",\"HB-8\",\"HB-9\",\"HB-B\",\"HB-C\",\"HB-D\",\"HB-F\",\"HB-N\",\"HB-V\",\n\"I-AD\",\n\"JAA0\",\"JAA1\",\"JAA2\",\"JAA3\",\"JAA4\",\"JAA5\",\"JAA6\",\"JAA7\",\"JAA8\",\"JAA9\",\"JAAA\",\n\"JR-0\",\"JR-1\",\"JR-2\",\"JR-3\",\"JR-4\",\"JR-5\",\"JR-6\",\"JR-7\",\"JR-8\",\"JR-9\",\n\"LN-A\",\"LN-C\",\"LN-G\",\"LN-Y\",\n\"LX-B\",\"LX-C\",\"LX-X\",\"LZ-B\",\n\"M-CH\",\"M-OV\",\"M-SE\",\n\"OE-0\",\"OE-1\",\"OE-2\",\"OE-3\",\"OE-4\",\"OE-5\",\"OE-9\",\"OE-F\",\"OE-W\",\n\"OK-P\",\"OK-U\",\n\"OM-M\",\n\"OO-B\",\"OO-Y\",\"OO-Z\",\"OO-0\",\"OO-1\",\"OO-2\",\"OO-3\",\"OO-4\",\"OO-5\",\"OO-6\",\"OO-7\",\"OO-8\",\"OO-9\",\n\"OP-D\",\n\"OY-1\",\"OY-9\",\"OY-B\",\"OY-C\",\"OY-N\",\"PH-D\",\"PH-E\",\n\"PH-1\",\"PH-2\",\"PH-3\",\"PH-4\",\"PH-5\",\"PH-6\",\"PH-7\",\"PH-8\",\"PH-9\",\"PH-N\",\"PH-V\",\"PH-Z\",\"PP-L\",\"PS-A\",\"RA-6\",\n\"S5-3\",\"S5-7\",\"S5-C\",\"S5-J\",\"S5-K\",\"S5-M\",\"S5-J\",\"S5-P\",\n\"SE-S\",\"SE-V\",\"SE-X\",\"SE-Y\",\"SE-Z\",\n\"SP-0\",\"SP-1\",\"SP-A\",\"SP-B\",\"SP-S\",\"SP-X\",\"SP-Y\",\n\"SU-M\",\n\"SX-1\",\"SX-2\",\"SX-3\",\"SX-4\",\"SX-5\",\"SX-6\",\"SX-7\",\"SX-8\",\"SX-9\",\"SX-U\",\n\"RA-0\",\"RA-1\",\"RA-2\",\"RA-3\",\"RA-4\",\"RA-5\",\"RA-6\",\"RA-7\",\"RA-8\",\"RA-9\",\n\"T7-D\",\n\"TC-B\",\"TC-P\",\"TC-U\",\"TC-Z\",\n\"TF-1\",\"TF-2\",\"TF-3\",\"TF-4\",\"TF-5\",\"TF-6\",\"TF-7\",\"TF-8\",\"TF-9\",\n\"VQ-B\",\"YU-B\",\"YU-P\",\"YU-R\",\"YU-S\",\"YU-T\",\n\"YR-1\",\"YR-2\",\"YR-3\",\"YR-4\",\"YR-5\",\"YR-6\",\"YR-7\",\"YR-8\",\"YR-9\", \"YR-D\",\n\"YU-0\",\"YU-1\",\"YU-2\",\"YU-3\",\"YU-4\",\"YU-5\",\"YU-6\",\"YU-7\",\"YU-8\",\"YU-9\",\"YU-D\",\n\"ZS-C\",\"ZS-Y\"\n].includes(registration.substr(0, 4))) {\n    msg.payload.iconColor = \"#66FFFF\"\n    if (msg.payload.icon != \"helicopter\")\n        msg.payload.icon = \"smallplane\"\n}\n\nif ([\"0020\", \"0023\", \"0024\", \"0025\", \"0027\", \"0030\", \"0033\", \"0034\", \"0036\", \"0037\",\n\"2000\",\"4450\",\"4643\",\"4447\",\"4441\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0066\"\n}\n\nif ([\"7500\", \"7600\", \"7700\"].includes(squawkCode)) {\n    msg.payload.iconColor = \"#FF0000\"\n    node.log(\"NOTFALL !!!\");\n}\nmsg.payload.human[\"gestarted in\"] = \"N/A\"\nmsg.payload.human[\"Ziel\"] = \"N/A\"\n\nairports.forEach(function(ap) {\n  if(ap.abr==origin_airport_iata) {\n      msg.payload.human[\"gestarted in\"] = ap.name+\" \"+ap.country\n  }\n  if(ap.abr==destination_airport_iata) {\n      msg.payload.human[\"Ziel\"] = ap.name+\" \"+ap.country\n  }\n});\n\ncache.push(msg.payload)\nglobal.set(\"flugzeuge\", cache)\n\n// und ab in den globalen context\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3136,7 +3158,12 @@
                 "b208da8087832d56",
                 "de1ff0ce0d582c52",
                 "9393ca7ceb72e33f",
-                "992e37d47ec43944"
+                "992e37d47ec43944",
+                "eedc790ba9e64cc3",
+                "2a14e0eb0c858960",
+                "5023e6781f085c5e",
+                "95736aca12315453",
+                "2b5aa7a9a07de8fd"
             ]
         ]
     },
@@ -3305,7 +3332,7 @@
         "type": "ui_text",
         "z": "32101b1a30d365e2",
         "group": "c2f0c7f8a9fe136e",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3403,7 +3430,7 @@
         "type": "ui_text",
         "z": "32101b1a30d365e2",
         "group": "c2f0c7f8a9fe136e",
-        "order": 5,
+        "order": 6,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3420,7 +3447,7 @@
         "type": "ui_text",
         "z": "32101b1a30d365e2",
         "group": "c2f0c7f8a9fe136e",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3437,8 +3464,8 @@
         "type": "ui_button",
         "z": "32101b1a30d365e2",
         "name": "",
-        "group": "c2f0c7f8a9fe136e",
-        "order": 7,
+        "group": "2cf1611be1ceb07e",
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3560,7 +3587,7 @@
         "id": "808e272d36d5bdde",
         "type": "ui_text",
         "z": "32101b1a30d365e2",
-        "group": "c2f0c7f8a9fe136e",
+        "group": "5d44660508d68b2b",
         "order": 6,
         "width": 0,
         "height": 0,
@@ -3608,7 +3635,32 @@
             },
             {
                 "t": "eq",
+                "v": "0027",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0030",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0033",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "0036",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0037",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1000",
                 "vt": "str"
             },
             {
@@ -3618,7 +3670,32 @@
             },
             {
                 "t": "eq",
-                "v": "1000",
+                "v": "4441",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4447",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4450",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4451",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4452",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4643",
                 "vt": "str"
             },
             {
@@ -3632,7 +3709,7 @@
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 10,
+        "outputs": 20,
         "x": 110,
         "y": 520,
         "wires": [
@@ -3652,13 +3729,43 @@
                 "6cb8fa2dfbc31502"
             ],
             [
+                "48662d3d274ae9ff"
+            ],
+            [
+                "0ae20c30c6463a49"
+            ],
+            [
+                "2a33378ec49ab486"
+            ],
+            [
                 "4af52f12c72aa479"
+            ],
+            [
+                "3eea4299c6d688cc"
+            ],
+            [
+                "4963e17ec0006fdd"
             ],
             [
                 "21e4e0f2fb1e400e"
             ],
             [
-                "4963e17ec0006fdd"
+                "af89c5b80ce2acb9"
+            ],
+            [
+                "7fd80b4f610b58bc"
+            ],
+            [
+                "df9a3ec9a06f03e9"
+            ],
+            [
+                "e3b0c42e350f5441"
+            ],
+            [
+                "20a1640bd95863c2"
+            ],
+            [
+                "a3e046c7104c20a6"
             ],
             [
                 "f75aa08471760ff7"
@@ -3715,7 +3822,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 560,
+        "y": 520,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3742,7 +3849,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 520,
+        "y": 820,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3769,7 +3876,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 760,
+        "y": 900,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3796,7 +3903,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 860,
+        "y": 1220,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3823,7 +3930,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 720,
+        "y": 660,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3850,7 +3957,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 680,
+        "y": 620,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3877,7 +3984,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 800,
+        "y": 940,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3904,7 +4011,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 640,
+        "y": 560,
         "wires": [
             [
                 "808e272d36d5bdde"
@@ -3916,7 +4023,7 @@
         "type": "function",
         "z": "32101b1a30d365e2",
         "name": "cleanUpHuman",
-        "func": "msg.payload.human.airline = msg.payload.human.airline ||\"N/A\"\nmsg.payload.human.airline = msg.payload.human.airline || \"N/A\"\nmsg.payload.human.Ziel = msg.payload.human.Ziel || \"N/A\"\nmsg.payload.human[\"gestarted in\"] = msg.payload.human[\"gestarted in\"] || \"N/A\"\n\nreturn msg;",
+        "func": "msg.payload.human.airline = msg.payload.human.airline ||\"N/A\"\nmsg.payload.human.airline = msg.payload.human.airline || \"N/A\"\nmsg.payload.human.Ziel = msg.payload.human.Ziel || \"N/A\"\nmsg.payload.human[\"gestarted in\"] = msg.payload.human[\"gestarted in\"] || \"N/A\"\nmsg.payload.altitude = msg.payload.altitude || \"N/A\"\nmsg.payload.rateOfClimb = msg.payload.rateOfClimb || \"N/A\"\nmsg.payload.bearing = msg.payload.bearing || \"0\"\nmsg.payload.speed = msg.payload.speed || \"N/A\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3955,7 +4062,7 @@
         "type": "ui_text",
         "z": "32101b1a30d365e2",
         "group": "c2f0c7f8a9fe136e",
-        "order": 2,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -4079,12 +4186,12 @@
         "id": "e2bccbbf37b6996d",
         "type": "ui_media",
         "z": "32101b1a30d365e2",
-        "group": "c2f0c7f8a9fe136e",
+        "group": "2cf1611be1ceb07e",
         "name": "JetPhotoImage",
         "width": 0,
         "height": 0,
         "order": 1,
-        "category": "platzhalter",
+        "category": "",
         "file": "keinbild.jpg",
         "layout": "center",
         "showcontrols": false,
@@ -4111,6 +4218,506 @@
         "wires": [
             [
                 "0ea2f7a1e63406c1"
+            ]
+        ]
+    },
+    {
+        "id": "2a33378ec49ab486",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0033",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "VFR militärisch bis FL 100",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "6144d03a93fe1090",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Callsign",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "eedc790ba9e64cc3",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "callsign_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.registration",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 640,
+        "wires": [
+            [
+                "6144d03a93fe1090"
+            ]
+        ]
+    },
+    {
+        "id": "2a14e0eb0c858960",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "bearing_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.bearing",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 680,
+        "wires": [
+            [
+                "fe5acc9525ed4923"
+            ]
+        ]
+    },
+    {
+        "id": "fe5acc9525ed4923",
+        "type": "ui_gauge",
+        "z": "32101b1a30d365e2",
+        "name": "",
+        "group": "5d44660508d68b2b",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "compass",
+        "title": "",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#e60000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1020,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "486ccc2ea4a8e7fb",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Höhe",
+        "format": "{{msg.payload}} km",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1010,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "5023e6781f085c5e",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "altitude_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(payload.altitude*0.0003048,2)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 720,
+        "wires": [
+            [
+                "486ccc2ea4a8e7fb"
+            ]
+        ]
+    },
+    {
+        "id": "362f16a530563da8",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Geschw.",
+        "format": "{{msg.payload}} km/h",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "95736aca12315453",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "speed_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(payload.speed*1.852,0)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 760,
+        "wires": [
+            [
+                "362f16a530563da8"
+            ]
+        ]
+    },
+    {
+        "id": "c8e22de135eb3c12",
+        "type": "ui_text",
+        "z": "32101b1a30d365e2",
+        "group": "5d44660508d68b2b",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Steigrate",
+        "format": "{{msg.payload}} m/s",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "2b5aa7a9a07de8fd",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "climbrate_select",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$round(payload.rateOfClimb*0.00508,0)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 800,
+        "wires": [
+            [
+                "c8e22de135eb3c12"
+            ]
+        ]
+    },
+    {
+        "id": "48662d3d274ae9ff",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0027",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Kunstflug",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 700,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "0ae20c30c6463a49",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0030",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Vermessungsflug",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 740,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "3eea4299c6d688cc",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "0037",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Polizei mit Restlichtverstärker",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 860,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "e3b0c42e350f5441",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "4451",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "FIS Langen",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1100,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "df9a3ec9a06f03e9",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "4450",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "FIS Langen",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1060,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "20a1640bd95863c2",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "4452",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "FIS Langen",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1140,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "a3e046c7104c20a6",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "4643",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Kontrollzone Hamburg-Fuhlsbüttel",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1180,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "7fd80b4f610b58bc",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "4447",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Kontrollzone Frankfurt am Main",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1020,
+        "wires": [
+            [
+                "808e272d36d5bdde"
+            ]
+        ]
+    },
+    {
+        "id": "af89c5b80ce2acb9",
+        "type": "change",
+        "z": "32101b1a30d365e2",
+        "name": "4441",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ATZ Egelsbach",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 980,
+        "wires": [
+            [
+                "808e272d36d5bdde"
             ]
         ]
     },
@@ -4151,7 +4758,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html>\n<head>\n\n    <title>three.js in node-red</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n<style>\nbody {background-color: powderblue;}\n</style>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n<body>\n\t<canvas class=\"webgl\"></canvas>\n\t\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js\"></script>\n<script src=\"https://unpkg.com/three@0.134.0/examples/js/loaders/OBJLoader.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js\"></script>\n\n<script src=\"webgl.js\"></script>\n</body>\n</html>\n\n",
+        "template": "<html>\n<head>\n\n    <title>three.js in node-red</title>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n<style>\nbody {background-color: powderblue;}\n</style>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.module.js\"></script>\n<body>\n\t<canvas class=\"webgl\"></canvas>\n\t\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js\"></script>\n<script src=\"https://unpkg.com/three@0.134.0/examples/js/loaders/OBJLoader.js\"></script>\n\n<script type=\"module\" src=\"webgl.js\"></script>\n</body>\n</html>\n\n",
         "output": "str",
         "x": 370,
         "y": 160,
