@@ -75,6 +75,14 @@
         "env": []
     },
     {
+        "id": "61acf437434d3143",
+        "type": "tab",
+        "label": "schiffe",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "6c46d60d1f3e7d40",
         "type": "ui_base",
         "theme": {
@@ -336,6 +344,26 @@
         "className": ""
     },
     {
+        "id": "407f45ddfc9af3d1",
+        "type": "ui_tab",
+        "name": "Schiffe",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b581dc5cbd598dbf",
+        "type": "ui_group",
+        "name": "Schiffe",
+        "tab": "407f45ddfc9af3d1",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "090866092f482bb7",
         "type": "ui_chart",
         "z": "2b499fb43b7c09b4",
@@ -563,7 +591,8 @@
             "740fa795d7ac2ecc",
             "d01ab548cfadf555",
             "f034fa4b38d12dc0",
-            "656909f25d20d4fe"
+            "656909f25d20d4fe",
+            "ad28265edb881299"
         ],
         "x": 935,
         "y": 280,
@@ -1760,7 +1789,8 @@
         "z": "aac6175d7d1306af",
         "name": "worldmap",
         "links": [
-            "c61228de2670ec42"
+            "c61228de2670ec42",
+            "2e4c12cfc83f2a2c"
         ],
         "x": 515,
         "y": 420,
@@ -2298,7 +2328,7 @@
         "showgrid": "false",
         "allowFileDrop": "false",
         "path": "/worldmap",
-        "overlist": "RA",
+        "overlist": "RA,SN",
         "maplist": "OSMC,EsriC,EsriS",
         "mapname": "",
         "mapurl": "",
@@ -3575,8 +3605,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 160,
-        "y": 400,
+        "x": 180,
+        "y": 280,
         "wires": [
             [
                 "6a335d63d34bd5a8"
@@ -4052,7 +4082,6 @@
         "y": 420,
         "wires": [
             [
-                "27140a84e9fee0e3",
                 "b9abd1afa7c285a6"
             ]
         ]
@@ -4722,40 +4751,25 @@
         ]
     },
     {
-        "id": "27140a84e9fee0e3",
-        "type": "debug",
-        "z": "32101b1a30d365e2",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 420,
-        "wires": []
-    },
-    {
         "id": "b9abd1afa7c285a6",
         "type": "function",
         "z": "32101b1a30d365e2",
-        "name": "N/A ",
+        "name": "N/A Lin_Type",
         "func": "msg.payload[4]=msg.payload[4]||\"N/A\"\nmsg.payload[1]=msg.payload[1]||\"N/A\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
+        "x": 960,
         "y": 480,
         "wires": [
             [
                 "cb7be853448ac0a3",
                 "93a633f332ddc9c9"
             ]
-        ]
+        ],
+        "info": "airline und planetype ggfs. mit N/A versehen"
     },
     {
         "id": "82bc22cb.914be",
@@ -4835,6 +4849,146 @@
         "wires": [
             [
                 "6752712.7f98a9"
+            ]
+        ]
+    },
+    {
+        "id": "b0f753961aa90943",
+        "type": "inject",
+        "z": "61acf437434d3143",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.zoom",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "1b0d58c53b60bec6"
+            ]
+        ]
+    },
+    {
+        "id": "17df3049afe66d71",
+        "type": "debug",
+        "z": "61acf437434d3143",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "837403839682ddce",
+        "type": "ui_iframe",
+        "z": "61acf437434d3143",
+        "group": "b581dc5cbd598dbf",
+        "name": "",
+        "order": 9,
+        "width": "6",
+        "height": "8",
+        "url": "http://localhost:1880/s",
+        "origin": "*",
+        "scale": 100,
+        "x": 850,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5420a272de7c5de",
+        "type": "http request",
+        "z": "61acf437434d3143",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "837403839682ddce"
+            ]
+        ]
+    },
+    {
+        "id": "711d6c8cbb47d158",
+        "type": "comment",
+        "z": "61acf437434d3143",
+        "name": "",
+        "info": "https://www.vesselfinder.com/aismap?zoom=12&lat=54.908534&lon=8.309822&width=100%&height=400&names=false&track=false&fleet=false&fleet_name=false&fleet_hide_old_positions=false&clicktoact=false&store_pos=true&ra=http%3A%2F%2Flocalhost%3A1880%2Fs",
+        "x": 410,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1b0d58c53b60bec6",
+        "type": "change",
+        "z": "61acf437434d3143",
+        "name": "vesselUrl",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "\"https://www.vesselfinder.com/aismap?zoom=8&lat=\"&payload.lat&\"&lon=\"&payload.lon&\"&width=100%&height=400&names=false&track=false&fleet=false&fleet_name=false&fleet_hide_old_positions=false&clicktoact=false&store_pos=true\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "c5420a272de7c5de"
+            ]
+        ]
+    },
+    {
+        "id": "ad28265edb881299",
+        "type": "link in",
+        "z": "61acf437434d3143",
+        "name": "",
+        "links": [
+            "c61228de2670ec42"
+        ],
+        "x": 145,
+        "y": 220,
+        "wires": [
+            [
+                "1b0d58c53b60bec6",
+                "17df3049afe66d71"
             ]
         ]
     }

@@ -13,7 +13,8 @@
         "node-red-contrib-ui-media": "~1.2.0",
         "node-red-contrib-web-worldmap": "~2.21.5",
         "node-red-dashboard": "~3.1.1",
-        "node-red-node-email-variable": "1.0.3"
+        "node-red-node-email-variable": "1.0.3",
+        "node-red-node-ui-iframe": "~0.2.1"
     },
     "node-red": {
         "settings": {
