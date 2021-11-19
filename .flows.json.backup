@@ -195,7 +195,7 @@
         "type": "ui_tab",
         "name": "System",
         "icon": "fa-television fa-2x",
-        "order": 3,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
@@ -246,7 +246,7 @@
         "type": "ui_tab",
         "name": "JetPhoto",
         "icon": "dashboard",
-        "order": 4,
+        "order": 3,
         "disabled": false,
         "hidden": true
     },
@@ -348,7 +348,7 @@
         "type": "ui_tab",
         "name": "Schiffe",
         "icon": "fa-ship fa-2x",
-        "order": 5,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -2116,7 +2116,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 460,
         "y": 460,
         "wires": [
             [
@@ -2145,8 +2145,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 330,
-        "y": 520,
+        "x": 410,
+        "y": 540,
         "wires": [
             [
                 "9a80d68b0f6e767d"

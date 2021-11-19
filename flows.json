@@ -2116,7 +2116,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 460,
         "y": 460,
         "wires": [
             [
@@ -2145,8 +2145,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 330,
-        "y": 520,
+        "x": 410,
+        "y": 540,
         "wires": [
             [
                 "9a80d68b0f6e767d"
@@ -3160,6 +3160,46 @@
         "tooltip": "",
         "x": 770,
         "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b483d4eb11386b6",
+        "type": "ui_button",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Zurück",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Home\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "2d98b449d1cbec7c"
+            ]
+        ]
+    },
+    {
+        "id": "2d98b449d1cbec7c",
+        "type": "ui_ui_control",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "events": "all",
+        "x": 260,
+        "y": 100,
         "wires": [
             []
         ]
