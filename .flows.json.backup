@@ -369,7 +369,7 @@
         "z": "2b499fb43b7c09b4",
         "name": "",
         "group": "ae559b234acc86eb",
-        "order": 7,
+        "order": 2,
         "width": "3",
         "height": "3",
         "label": "Memory",
@@ -401,8 +401,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 760,
-        "y": 300,
+        "x": 800,
+        "y": 120,
         "wires": [
             []
         ]
@@ -432,7 +432,8 @@
         "wires": [
             [
                 "a03d87b7ccb4402e",
-                "041a15bcc4d0b1b4"
+                "041a15bcc4d0b1b4",
+                "8ad5e3bf977e55d6"
             ]
         ]
     },
@@ -442,7 +443,7 @@
         "z": "2b499fb43b7c09b4",
         "name": "",
         "group": "ae559b234acc86eb",
-        "order": 4,
+        "order": 1,
         "width": "3",
         "height": "3",
         "label": "Load Avg",
@@ -474,7 +475,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 840,
+        "x": 800,
         "y": 80,
         "wires": [
             []
@@ -526,8 +527,8 @@
         "z": "2b499fb43b7c09b4",
         "name": "",
         "scale": "Byte",
-        "x": 390,
-        "y": 300,
+        "x": 420,
+        "y": 120,
         "wires": [
             [
                 "05e98fa0a9e982cd"
@@ -544,8 +545,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload.memusage",
-                "tot": "msg"
+                "to": "100-payload.memusage",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -553,12 +554,155 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 320,
+        "x": 610,
+        "y": 120,
         "wires": [
             [
                 "090866092f482bb7"
             ]
+        ]
+    },
+    {
+        "id": "53f925b647ac2e18",
+        "type": "ui_button",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Zurück",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Home\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 360,
+        "wires": [
+            [
+                "d03787d85c47819f"
+            ]
+        ]
+    },
+    {
+        "id": "d03787d85c47819f",
+        "type": "ui_ui_control",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "events": "all",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2a49f14dd1e8ca5b",
+        "type": "debug",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6b6472e2ec40790a",
+        "type": "inject",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ad5e3bf977e55d6",
+        "type": "network_stats",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "receivedBytesSec": true,
+        "transmittedBytesSec": true,
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "2a49f14dd1e8ca5b",
+                "3af28f6c252fe923"
+            ]
+        ]
+    },
+    {
+        "id": "3af28f6c252fe923",
+        "type": "ui_chart",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "label": "Netz",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 240,
+        "wires": [
+            []
         ]
     },
     {
@@ -3160,6 +3304,46 @@
         "tooltip": "",
         "x": 770,
         "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b483d4eb11386b6",
+        "type": "ui_button",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "group": "b38b00e078ff3c09",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Zurück",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Home\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "2d98b449d1cbec7c"
+            ]
+        ]
+    },
+    {
+        "id": "2d98b449d1cbec7c",
+        "type": "ui_ui_control",
+        "z": "09a43f806fd59071",
+        "name": "",
+        "events": "all",
+        "x": 260,
+        "y": 100,
         "wires": [
             []
         ]
