@@ -347,7 +347,7 @@
         "id": "407f45ddfc9af3d1",
         "type": "ui_tab",
         "name": "Schiffe",
-        "icon": "dashboard",
+        "icon": "fa-ship fa-2x",
         "order": 5,
         "disabled": false,
         "hidden": false

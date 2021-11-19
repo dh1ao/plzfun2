@@ -195,7 +195,7 @@
         "type": "ui_tab",
         "name": "System",
         "icon": "fa-television fa-2x",
-        "order": 3,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
@@ -246,7 +246,7 @@
         "type": "ui_tab",
         "name": "JetPhoto",
         "icon": "dashboard",
-        "order": 4,
+        "order": 3,
         "disabled": false,
         "hidden": true
     },
@@ -348,7 +348,7 @@
         "type": "ui_tab",
         "name": "Schiffe",
         "icon": "fa-ship fa-2x",
-        "order": 5,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
