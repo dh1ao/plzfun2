@@ -344,6 +344,26 @@
         "className": ""
     },
     {
+        "id": "407f45ddfc9af3d1",
+        "type": "ui_tab",
+        "name": "Schiffe",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b581dc5cbd598dbf",
+        "type": "ui_group",
+        "name": "Schiffe",
+        "tab": "407f45ddfc9af3d1",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "090866092f482bb7",
         "type": "ui_chart",
         "z": "2b499fb43b7c09b4",
@@ -571,7 +591,8 @@
             "740fa795d7ac2ecc",
             "d01ab548cfadf555",
             "f034fa4b38d12dc0",
-            "656909f25d20d4fe"
+            "656909f25d20d4fe",
+            "ad28265edb881299"
         ],
         "x": 935,
         "y": 280,
@@ -1768,7 +1789,8 @@
         "z": "aac6175d7d1306af",
         "name": "worldmap",
         "links": [
-            "c61228de2670ec42"
+            "c61228de2670ec42",
+            "2e4c12cfc83f2a2c"
         ],
         "x": 515,
         "y": 420,
@@ -4831,115 +4853,95 @@
         ]
     },
     {
-        "id": "b0f753961aa90943",
-        "type": "inject",
+        "id": "837403839682ddce",
+        "type": "ui_iframe",
+        "z": "61acf437434d3143",
+        "group": "b581dc5cbd598dbf",
+        "name": "",
+        "order": 9,
+        "width": "6",
+        "height": "8",
+        "url": "http://localhost:1880/s",
+        "origin": "*",
+        "scale": 100,
+        "x": 850,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5420a272de7c5de",
+        "type": "http request",
         "z": "61acf437434d3143",
         "name": "",
-        "props": [
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "837403839682ddce"
+            ]
+        ]
+    },
+    {
+        "id": "711d6c8cbb47d158",
+        "type": "comment",
+        "z": "61acf437434d3143",
+        "name": "",
+        "info": "https://www.vesselfinder.com/aismap?zoom=12&lat=54.908534&lon=8.309822&width=100%&height=400&names=false&track=false&fleet=false&fleet_name=false&fleet_hide_old_positions=false&clicktoact=false&store_pos=true&ra=http%3A%2F%2Flocalhost%3A1880%2Fs",
+        "x": 410,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1b0d58c53b60bec6",
+        "type": "change",
+        "z": "61acf437434d3143",
+        "name": "vesselUrl",
+        "rules": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "\"https://www.vesselfinder.com/aismap?zoom=8&lat=\"&payload.lat&\"&lon=\"&payload.lon&\"&width=100%&height=400&names=false&track=false&fleet=false&fleet_name=false&fleet_hide_old_positions=false&clicktoact=false&store_pos=true\"",
+                "tot": "jsonata"
             }
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "c5420a272de7c5de"
+            ]
+        ]
+    },
+    {
+        "id": "ad28265edb881299",
+        "type": "link in",
+        "z": "61acf437434d3143",
+        "name": "",
+        "links": [
+            "c61228de2670ec42"
+        ],
+        "x": 145,
         "y": 220,
         "wires": [
             [
-                "fe38b0cc8ce38357"
-            ]
-        ]
-    },
-    {
-        "id": "a8fa734b98ec72f8",
-        "type": "template",
-        "z": "61acf437434d3143",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<script type=\"text/javascript\">\n    // Map appearance\n    var width=\"100%\";         // width in pixels or percentage\n    var height=\"300\";         // height in pixels\n    var latitude=\"54.908534\";     // center latitude (decimal degrees)\n    var longitude=\"8.309822\";    // center longitude (decimal degrees)\n    var zoom=\"8\";             // initial zoom (between 3 and 18)\n</script>\n<script type=\"text/javascript\" src=\"https://www.vesselfinder.com/aismap.js\"></script>",
-        "output": "str",
-        "x": 610,
-        "y": 180,
-        "wires": [
-            [
-                "c5698040976aac6c"
-            ]
-        ]
-    },
-    {
-        "id": "17df3049afe66d71",
-        "type": "debug",
-        "z": "61acf437434d3143",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "12750f7806e59a57",
-        "type": "http in",
-        "z": "61acf437434d3143",
-        "name": "",
-        "url": "s",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 420,
-        "y": 260,
-        "wires": [
-            [
-                "17df3049afe66d71",
-                "a8fa734b98ec72f8"
-            ]
-        ]
-    },
-    {
-        "id": "c5698040976aac6c",
-        "type": "http response",
-        "z": "61acf437434d3143",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 840,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "fe38b0cc8ce38357",
-        "type": "function",
-        "z": "61acf437434d3143",
-        "name": "",
-        "func": "(function injected(eventName, injectedIntoContentWindow)\n{\n  let checkRequest;\n\n  /*\n   * Frame context wrapper\n   *\n   * For some edge-cases Chrome will not run content scripts inside of frames.\n   * Website have started to abuse this fact to access unwrapped APIs via a\n   * frame's contentWindow (#4586, 5207). Therefore until Chrome runs content\n   * scripts consistently for all frames we must take care to (re)inject our\n   * wrappers when the contentWindow is accessed.\n   */\n  let injectedToString = Function.prototype.toString.bind(injected);\n  let injectedFrames = new WeakSet();\n  let injectedFramesAdd = WeakSet.prototype.add.bind(injectedFrames);\n  let injectedFramesHas = WeakSet.prototype.has.bind(injectedFrames);\n\n  function injectIntoContentWindow(contentWindow)\n  {\n    if (contentWindow && !injectedFramesHas(contentWindow))\n    {\n      injectedFramesAdd(contentWindow);\n      try\n      {\n        contentWindow[eventName] = checkRequest;\n        contentWindow.eval(\n          \"(\" + injectedToString() + \")('\" + eventName + \"', true);\"\n        );\n        delete contentWindow[eventName];\n      }\n      catch (e) {}\n    }\n  }\n\n  for (let element of [HTMLFrameElement, HTMLIFrameElement, HTMLObjectElement])\n  {\n    let contentDocumentDesc = Object.getOwnPropertyDescriptor(\n      element.prototype, \"contentDocument\"\n    );\n    let contentWindowDesc = Object.getOwnPropertyDescriptor(\n      element.prototype, \"contentWindow\"\n    );\n\n    // Apparently in HTMLObjectElement.prototype.contentWindow does not exist\n    // in older versions of Chrome such as 51.\n    if (!contentWindowDesc)\n      continue;\n\n    let getContentDocument = Function.prototype.call.bind(\n      contentDocumentDesc.get\n    );\n    let getContentWindow = Function.prototype.call.bind(\n      contentWindowDesc.get\n    );\n\n    contentWindowDesc.get = function()\n    {\n      let contentWindow = getContentWindow(this);\n      injectIntoContentWindow(contentWindow);\n      return contentWindow;\n    };\n    contentDocumentDesc.get = function()\n    {\n      injectIntoContentWindow(getContentWindow(this));\n      return getContentDocument(this);\n    };\n    Object.defineProperty(element.prototype, \"contentWindow\",\n                          contentWindowDesc);\n    Object.defineProperty(element.prototype, \"contentDocument\",\n                          contentDocumentDesc);\n  }\n\n  /*\n   * RTCPeerConnection wrapper\n   *\n   * The webRequest API in Chrome does not yet allow the blocking of\n   * WebRTC connections.\n   * See https://bugs.chromium.org/p/chromium/issues/detail?id=707683\n   */\n  let RealCustomEvent = window.CustomEvent;\n\n  // If we've been injected into a frame via contentWindow then we can simply\n  // grab the copy of checkRequest left for us by the parent document. Otherwise\n  // we need to set it up now, along with the event handling functions.\n  if (injectedIntoContentWindow)\n  {\n    checkRequest = window[eventName];\n  }\n  else\n  {\n    let addEventListener = document.addEventListener.bind(document);\n    let dispatchEvent = document.dispatchEvent.bind(document);\n    let removeEventListener = document.removeEventListener.bind(document);\n    checkRequest = (url, callback) =>\n    {\n      let incomingEventName = eventName + \"-\" + url;\n\n      function listener(event)\n      {\n        callback(event.detail);\n        removeEventListener(incomingEventName, listener);\n      }\n      addEventListener(incomingEventName, listener);\n\n      dispatchEvent(new RealCustomEvent(eventName, {detail: {url}}));\n    };\n  }\n\n  // Only to be called before the page's code, not hardened.\n  function copyProperties(src, dest, properties)\n  {\n    for (let name of properties)\n    {\n      if (Object.prototype.hasOwnProperty.call(src, name))\n      {\n        Object.defineProperty(dest, name,\n                              Object.getOwnPropertyDescriptor(src, name));\n      }\n    }\n  }\n\n  let RealRTCPeerConnection = window.RTCPeerConnection ||\n                              window.webkitRTCPeerConnection;\n\n  // Firefox has the option (media.peerconnection.enabled) to disable WebRTC\n  // in which case RealRTCPeerConnection is undefined.\n  if (typeof RealRTCPeerConnection != \"undefined\")\n  {\n    let closeRTCPeerConnection = Function.prototype.call.bind(\n      RealRTCPeerConnection.prototype.close\n    );\n    let RealArray = Array;\n    let RealString = String;\n    let {create: createObject, defineProperty} = Object;\n\n    let normalizeUrl = url =>\n    {\n      if (typeof url != \"undefined\")\n        return RealString(url);\n    };\n\n    let safeCopyArray = (originalArray, transform) =>\n    {\n      if (originalArray == null || typeof originalArray != \"object\")\n        return originalArray;\n\n      let safeArray = RealArray(originalArray.length);\n      for (let i = 0; i < safeArray.length; i++)\n      {\n        defineProperty(safeArray, i, {\n          configurable: false, enumerable: false, writable: false,\n          value: transform(originalArray[i])\n        });\n      }\n      defineProperty(safeArray, \"length\", {\n        configurable: false, enumerable: false, writable: false,\n        value: safeArray.length\n      });\n      return safeArray;\n    };\n\n    // It would be much easier to use the .getConfiguration method to obtain\n    // the normalized and safe configuration from the RTCPeerConnection\n    // instance. Unfortunately its not implemented as of Chrome unstable 59.\n    // See https://www.chromestatus.com/feature/5271355306016768\n    let protectConfiguration = configuration =>\n    {\n      if (configuration == null || typeof configuration != \"object\")\n        return configuration;\n\n      let iceServers = safeCopyArray(\n        configuration.iceServers,\n        iceServer =>\n        {\n          let {url, urls} = iceServer;\n\n          // RTCPeerConnection doesn't iterate through pseudo Arrays of urls.\n          if (typeof urls != \"undefined\" && !(urls instanceof RealArray))\n            urls = [urls];\n\n          return createObject(iceServer, {\n            url: {\n              configurable: false, enumerable: false, writable: false,\n              value: normalizeUrl(url)\n            },\n            urls: {\n              configurable: false, enumerable: false, writable: false,\n              value: safeCopyArray(urls, normalizeUrl)\n            }\n          });\n        }\n      );\n\n      return createObject(configuration, {\n        iceServers: {\n          configurable: false, enumerable: false, writable: false,\n          value: iceServers\n        }\n      });\n    };\n\n    let checkUrl = (peerconnection, url) =>\n    {\n      checkRequest(url, blocked =>\n      {\n        if (blocked)\n        {\n          // Calling .close() throws if already closed.\n          try\n          {\n            closeRTCPeerConnection(peerconnection);\n          }\n          catch (e) {}\n        }\n      });\n    };\n\n    let checkConfiguration = (peerconnection, configuration) =>\n    {\n      if (configuration && configuration.iceServers)\n      {\n        for (let i = 0; i < configuration.iceServers.length; i++)\n        {\n          let iceServer = configuration.iceServers[i];\n          if (iceServer)\n          {\n            if (iceServer.url)\n              checkUrl(peerconnection, iceServer.url);\n\n            if (iceServer.urls)\n            {\n              for (let j = 0; j < iceServer.urls.length; j++)\n                checkUrl(peerconnection, iceServer.urls[j]);\n            }\n          }\n        }\n      }\n    };\n\n    // Chrome unstable (tested with 59) has already implemented\n    // setConfiguration, so we need to wrap that if it exists too.\n    // https://www.chromestatus.com/feature/5596193748942848\n    if (RealRTCPeerConnection.prototype.setConfiguration)\n    {\n      let realSetConfiguration = Function.prototype.call.bind(\n        RealRTCPeerConnection.prototype.setConfiguration\n      );\n\n      RealRTCPeerConnection.prototype.setConfiguration = function(configuration)\n      {\n        configuration = protectConfiguration(configuration);\n\n        // Call the real method first, so that validates the configuration for\n        // us. Also we might as well since checkRequest is asynchronous anyway.\n        realSetConfiguration(this, configuration);\n        checkConfiguration(this, configuration);\n      };\n    }\n\n    let WrappedRTCPeerConnection = function(...args)\n    {\n      if (!(this instanceof WrappedRTCPeerConnection))\n        return RealRTCPeerConnection();\n\n      let configuration = protectConfiguration(args[0]);\n\n      // Since the old webkitRTCPeerConnection constructor takes an optional\n      // second argument we need to take care to pass that through. Necessary\n      // for older versions of Chrome such as 51.\n      let constraints;\n      if (args.length > 1)\n        constraints = args[1];\n\n      let peerconnection = new RealRTCPeerConnection(configuration,\n                                                     constraints);\n      checkConfiguration(peerconnection, configuration);\n      return peerconnection;\n    };\n\n    WrappedRTCPeerConnection.prototype = RealRTCPeerConnection.prototype;\n\n    let boundWrappedRTCPeerConnection = WrappedRTCPeerConnection.bind();\n    copyProperties(RealRTCPeerConnection, boundWrappedRTCPeerConnection,\n                   [\"generateCertificate\", \"name\", \"prototype\"]);\n    RealRTCPeerConnection.prototype.constructor = boundWrappedRTCPeerConnection;\n\n    if (\"RTCPeerConnection\" in window)\n      window.RTCPeerConnection = boundWrappedRTCPeerConnection;\n    if (\"webkitRTCPeerConnection\" in window)\n      window.webkitRTCPeerConnection = boundWrappedRTCPeerConnection;\n  }\n})('abp-request-3iu9wnmmhr3');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 370,
-        "y": 400,
-        "wires": [
-            [
-                "17df3049afe66d71"
+                "1b0d58c53b60bec6"
             ]
         ]
     }
