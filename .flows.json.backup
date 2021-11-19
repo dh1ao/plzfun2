@@ -582,8 +582,8 @@
         "payloadType": "json",
         "topic": "topic",
         "topicType": "msg",
-        "x": 150,
-        "y": 360,
+        "x": 910,
+        "y": 200,
         "wires": [
             [
                 "d03787d85c47819f"
@@ -596,35 +596,8 @@
         "z": "2b499fb43b7c09b4",
         "name": "",
         "events": "all",
-        "x": 320,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6b6472e2ec40790a",
-        "type": "inject",
-        "z": "2b499fb43b7c09b4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 220,
+        "x": 1080,
+        "y": 200,
         "wires": [
             []
         ]

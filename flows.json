@@ -433,7 +433,8 @@
             [
                 "a03d87b7ccb4402e",
                 "041a15bcc4d0b1b4",
-                "8ad5e3bf977e55d6"
+                "8ad5e3bf977e55d6",
+                "59b1ab7e783be9ac"
             ]
         ]
     },
@@ -657,6 +658,65 @@
         "className": "",
         "x": 630,
         "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "59b1ab7e783be9ac",
+        "type": "diskio",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "readIOsSec": true,
+        "writeIOsSec": true,
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [
+                "089f5db9d5800952"
+            ]
+        ]
+    },
+    {
+        "id": "089f5db9d5800952",
+        "type": "ui_chart",
+        "z": "2b499fb43b7c09b4",
+        "name": "",
+        "group": "ae559b234acc86eb",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "label": "HD",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 220,
         "wires": [
             []
         ]
